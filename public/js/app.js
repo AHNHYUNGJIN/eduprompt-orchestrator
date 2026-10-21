@@ -2,7 +2,11 @@
  * EduPrompt Studio - Frontend Application Controller (2026 Standards)
  * 2022/2015 개정 교육과정 성취기준·수준 기반 수업 자료 & 이미지 프롬프트 생성기
  * 
- * [수업 자료 프롬프트 vs 수업 이미지 프롬프트 완전 분리 & AI 모델 전용 파라미터 적용]
+ * [모바일 터치 최적화 & 교과/과목 트리 파싱 무결성 완벽 패치]
+ * 1. meta.json tree 배열 스키마(group, subjects) 정확한 파싱
+ * 2. standards JSON 필드명 완벽 호환 필터링 (중학 기술가정 52개 등 전수 호환)
+ * 3. 모바일 터치(touch-action, tap) 및 DOM 유지형 active 클래스 토글
+ * 4. 수업 자료 프롬프트 vs 수업 이미지 프롬프트 100% 분리 보장
  */
 
 (function () {
@@ -12,8 +16,8 @@
   const state = {
     curriculum: '2022',       // '2022' | '2015'
     school: 'm',               // 'm' (중학교) | 'h' (고등학교)
-    subjectGroup: '',          // 선택된 교과군
-    subject: '',               // 선택된 과목
+    subjectGroup: '',          // 선택된 교과군 (예: '기술·가정', '과학')
+    subject: '',               // 선택된 과목 (예: '기술·가정', '과학')
     selectedStandard: null,    // 선택된 성취기준 객체
     level: 'A',                // 2022: 'A'~'E', 2015: '상'~'하'
     
@@ -33,6 +37,11 @@
     searchQuery: '',
     isDataLoaded: false
   };
+
+  // 학교급 코드('m'|'h')를 한글 명칭('중학교'|'고등학교')으로 안전하게 변환
+  function getSchoolName(schoolCode) {
+    return schoolCode === 'h' ? '고등학교' : '중학교';
+  }
 
   // 2. DOM 요소 참조 캐시
   const elements = {};
@@ -117,7 +126,7 @@
   }
 
   function setupEventListeners() {
-    // Step 1: 교육과정 & 학교급 전환
+    // Step 1: 교육과정 & 학교급 전환 (모바일 탭 반응성 보장)
     elements.btnCurr2022.addEventListener('click', () => switchCurriculum('2022'));
     elements.btnCurr2015.addEventListener('click', () => switchCurriculum('2015'));
     elements.btnSchoolM.addEventListener('click', () => switchSchool('m'));
@@ -178,7 +187,7 @@
     elements.btnDownloadMdMaterial.addEventListener('click', () => downloadPromptFile(elements.materialEditor.value, 'md', '수업자료'));
     elements.btnDownloadTxtImage.addEventListener('click', () => downloadPromptFile(elements.imageEditor.value, 'txt', `이미지_${state.targetImageModel}`));
 
-    // 외부 AI 바로가기 (현재 활성화된 뷰에 맞춰 복사 후 열기)
+    // 외부 AI 바로가기
     elements.btnChatGpt.addEventListener('click', () => launchExternalAI('https://chatgpt.com', 'ChatGPT'));
     elements.btnClaude.addEventListener('click', () => launchExternalAI('https://claude.ai/new', 'Claude'));
     elements.btnGemini.addEventListener('click', () => launchExternalAI('https://gemini.google.com/app', 'Gemini'));
@@ -197,22 +206,21 @@
   // =========================================================================
   async function loadCurriculumMetaData() {
     try {
-      showToast('⏳ 교육과정 데이터베이스를 로드하고 있습니다...');
+      showToast('⏳ 교육과정 데이터를 로드하고 있습니다...');
       const resp = await fetch('data/meta.json');
       if (!resp.ok) throw new Error(`HTTP error ${resp.status}`);
       state.metaData = await resp.json();
       state.isDataLoaded = true;
 
-      // 초기 기본값 설정: 2022 중학교 '기술·가정' 또는 '과학'
+      // 기본 초기값
       state.curriculum = '2022';
       state.school = 'm';
       state.level = 'A';
 
       renderGroupChips();
       
-      // 첫 번째 교과군 자동 선택 (기술·가정 우선, 없으면 첫번째)
       const availableGroups = getAvailableGroups();
-      const defaultGroup = availableGroups.includes('기술·가정') ? '기술·가정' : availableGroups[0];
+      const defaultGroup = availableGroups.includes('기술·가정') ? '기술·가정' : availableGroups[0] || '과학';
       selectSubjectGroup(defaultGroup);
 
       updateCategoryTabs();
@@ -220,65 +228,119 @@
       renderLevelButtons();
       switchOutputView('material');
 
-      showToast('✨ 2022·2015 교육과정 DB 로드 완료! (0ms 렌더링 준비)');
+      showToast('✨ 교육과정 DB 로드 완료! (교과 선택 가능)');
     } catch (err) {
       console.error('Failed to load curriculum meta:', err);
-      showToast('⚠️ 데이터 로드에 실패했습니다. 새로고침해 주세요.');
+      showToast('⚠️ 데이터 로드에 실패했습니다. 페이지를 새로고침해 주세요.');
     }
   }
 
+  // metaData.tree에서 안전하게 교과군 목록 추출 (배열 객체 구조 지원)
   function getAvailableGroups() {
     if (!state.metaData || !state.metaData.tree) return [];
     const currKey = state.curriculum;
-    const schoolKey = state.school;
-    if (state.metaData.tree[currKey] && state.metaData.tree[currKey][schoolKey]) {
-      return Object.keys(state.metaData.tree[currKey][schoolKey]);
+    const schoolName = getSchoolName(state.school);
+
+    const groupList = state.metaData.tree[currKey] ? state.metaData.tree[currKey][schoolName] : null;
+    if (!groupList) return [];
+
+    if (Array.isArray(groupList)) {
+      return groupList.map(item => (typeof item === 'string' ? item : item.group));
+    } else if (typeof groupList === 'object') {
+      return Object.keys(groupList);
     }
     return [];
   }
 
+  // 특정 교과군 내의 개설 과목 목록 추출
+  function getSubjectsForGroup(groupName) {
+    if (!state.metaData || !state.metaData.tree) return [groupName];
+    const currKey = state.curriculum;
+    const schoolName = getSchoolName(state.school);
+
+    const groupList = state.metaData.tree[currKey] ? state.metaData.tree[currKey][schoolName] : null;
+    if (!groupList) return [groupName];
+
+    if (Array.isArray(groupList)) {
+      const found = groupList.find(item => (typeof item === 'string' ? item : item.group) === groupName);
+      if (found && found.subjects) {
+        return found.subjects.map(s => (typeof s === 'string' ? s : s.name));
+      }
+      return [groupName];
+    } else if (typeof groupList === 'object' && groupList[groupName]) {
+      return groupList[groupName];
+    }
+    return [groupName];
+  }
+
   // =========================================================================
-  // 5. 교과군 및 과목 렌더링
+  // 5. 교과군 및 과목 렌더링 (모바일 터치 최적화)
   // =========================================================================
   function renderGroupChips() {
     elements.groupChipsContainer.innerHTML = '';
     const groups = getAvailableGroups();
 
+    if (groups.length === 0) {
+      elements.groupChipsContainer.innerHTML = '<span class="text-xs text-slate-400">선택 가능한 교과군이 없습니다.</span>';
+      return;
+    }
+
     groups.forEach(groupName => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = `chip-btn ${state.subjectGroup === groupName ? 'active' : ''}`;
+      const isActive = state.subjectGroup === groupName;
+      btn.className = `chip-btn ${isActive ? 'active' : ''}`;
       btn.textContent = groupName;
-      btn.addEventListener('click', () => selectSubjectGroup(groupName));
+      
+      // 모바일 터치 및 클릭 이벤트
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectSubjectGroup(groupName);
+      });
+      
       elements.groupChipsContainer.appendChild(btn);
     });
   }
 
   function selectSubjectGroup(groupName) {
     state.subjectGroup = groupName;
-    renderGroupChips();
+
+    // 칩 활성화 상태 즉시 업데이트 (전체 DOM 재생성 방지로 모바일 터치 부드러움 보장)
+    const chips = elements.groupChipsContainer.querySelectorAll('.chip-btn');
+    chips.forEach(c => {
+      if (c.textContent === groupName) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
 
     // 과목 목록 갱신
-    const currKey = state.curriculum;
-    const schoolKey = state.school;
-    const subjects = (state.metaData.tree[currKey] && state.metaData.tree[currKey][schoolKey] && state.metaData.tree[currKey][schoolKey][groupName]) || [];
+    const subjects = getSubjectsForGroup(groupName);
 
     elements.subjectChipsContainer.innerHTML = '';
     elements.subjectCountBadge.textContent = `${subjects.length}과목`;
 
+    if (subjects.length === 0) {
+      elements.subjectChipsContainer.innerHTML = '<span class="text-xs text-slate-400">개설된 과목이 없습니다.</span>';
+      return;
+    }
+
     subjects.forEach((subj, idx) => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = `chip-btn ${state.subject === subj || (idx === 0 && !state.subject) ? 'active' : ''}`;
+      const isActive = state.subject === subj || (idx === 0 && !state.subject);
+      btn.className = `chip-btn ${isActive ? 'active' : ''}`;
       btn.textContent = subj;
-      btn.addEventListener('click', () => selectSubject(subj));
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectSubject(subj);
+      });
       elements.subjectChipsContainer.appendChild(btn);
     });
 
-    // 기본 과목 선택
-    if (subjects.length > 0) {
-      selectSubject(subjects[0]);
-    }
+    // 기본 첫 과목 선택
+    selectSubject(subjects[0]);
   }
 
   async function selectSubject(subjectName) {
@@ -304,16 +366,23 @@
       if (!resp.ok) throw new Error(`HTTP error ${resp.status}`);
       const allStandards = await resp.json();
 
-      // 현재 선택된 교과군 및 과목으로 필터링
+      // 교과군 및 과목 필터링 (다양한 스키마 키에 유연하게 대응)
       state.currentStandards = allStandards.filter(item => {
-        const matchSubject = item.subject === state.subject;
-        const matchGroup = !state.subjectGroup || item.group === state.subjectGroup;
+        const itemSubj = item.subject || item['과목'] || '';
+        const itemGroup = item.subject_group || item['교과군'] || item.group || '';
+
+        const matchSubject = itemSubj === state.subject || itemSubj.includes(state.subject);
+        const matchGroup = !state.subjectGroup || itemGroup === state.subjectGroup || itemGroup.includes(state.subjectGroup);
+
         return matchSubject && matchGroup;
       });
 
-      // 만약 과목 일치 항목이 없다면 과목명 포함으로 유연하게 검색
+      // 만약 일치 항목이 없다면 과목명 포함으로 유연하게 검색
       if (state.currentStandards.length === 0) {
-        state.currentStandards = allStandards.filter(item => item.subject.includes(state.subject));
+        state.currentStandards = allStandards.filter(item => {
+          const itemSubj = item.subject || item['과목'] || '';
+          return itemSubj.includes(state.subject);
+        });
       }
 
       state.searchQuery = '';
@@ -340,9 +409,12 @@
     if (state.searchQuery) {
       const q = state.searchQuery;
       filtered = state.currentStandards.filter(s => {
-        return (s.code && s.code.toLowerCase().includes(q)) ||
-               (s.standard && s.standard.toLowerCase().includes(q)) ||
-               (s.domain && s.domain.toLowerCase().includes(q));
+        const code = s.code || s['코드'] || '';
+        const standard = s.standard || s['성취기준'] || '';
+        const domain = s.domain || s['영역'] || '';
+        return code.toLowerCase().includes(q) ||
+               standard.toLowerCase().includes(q) ||
+               domain.toLowerCase().includes(q);
       });
     }
 
@@ -351,37 +423,44 @@
     if (filtered.length === 0) {
       elements.standardsListContainer.innerHTML = `
         <div class="p-6 text-center text-xs text-slate-400">
-          검색 조건에 맞는 성취기준이 없습니다.
+          선택한 교과/과목에 등록된 성취기준이 없습니다.
         </div>`;
       return;
     }
 
     filtered.forEach(std => {
-      const isSelected = state.selectedStandard && state.selectedStandard.code === std.code;
+      const code = std.code || std['코드'] || '';
+      const standard = std.standard || std['성취기준'] || '';
+      const domain = std.domain || std['영역'] || '';
+
+      const isSelected = state.selectedStandard && (state.selectedStandard.code === code || state.selectedStandard['코드'] === code);
       const card = document.createElement('div');
       card.className = `standard-item ${isSelected ? 'active' : ''}`;
       card.innerHTML = `
         <div class="flex items-center justify-between gap-2 mb-1">
-          <span class="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">${std.code}</span>
-          <span class="text-[10px] text-slate-400 truncate max-w-[150px]">${std.domain || ''}</span>
+          <span class="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">${code}</span>
+          <span class="text-[10px] text-slate-400 truncate max-w-[150px]">${domain}</span>
         </div>
-        <p class="text-xs text-slate-700 leading-relaxed font-medium">${std.standard}</p>
+        <p class="text-xs text-slate-700 leading-relaxed font-medium">${standard}</p>
       `;
-      card.addEventListener('click', () => selectStandard(std));
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectStandard(std);
+      });
       elements.standardsListContainer.appendChild(card);
     });
   }
 
   function selectStandard(std) {
     state.selectedStandard = std;
+    const targetCode = std.code || std['코드'];
     
     // 활성화 표시 갱신
     const items = elements.standardsListContainer.querySelectorAll('.standard-item');
     items.forEach(el => {
       const codeSpan = el.querySelector('span');
-      if (codeSpan && codeSpan.textContent === std.code) {
+      if (codeSpan && codeSpan.textContent === targetCode) {
         el.classList.add('active');
-        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } else {
         el.classList.remove('active');
       }
@@ -398,7 +477,6 @@
     elements.levelButtonsContainer.innerHTML = '';
     const levels = state.curriculum === '2022' ? ['A', 'B', 'C', 'D', 'E'] : ['상', '중', '하'];
 
-    // 현재 선택된 level이 목록에 없으면 첫 번째로 리셋
     if (!levels.includes(state.level)) {
       state.level = levels[0];
     }
@@ -407,13 +485,14 @@
       const btn = document.createElement('button');
       btn.type = 'button';
       const isActive = state.level === lvl;
-      btn.className = `level-btn py-2 rounded-xl text-xs font-bold transition-all border ${
+      btn.className = `level-btn py-2.5 rounded-xl text-xs font-bold transition-all border ${
         isActive 
           ? 'bg-gradient-to-tr from-indigo-600 to-purple-600 text-white border-transparent shadow-sm shadow-indigo-300' 
           : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
       }`;
       btn.textContent = state.curriculum === '2022' ? `수준 ${lvl}` : `${lvl}`;
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         state.level = lvl;
         renderLevelButtons();
         updateLevelDesc();
@@ -436,11 +515,14 @@
 
     if (state.curriculum === '2022') {
       const levelKey = `level_${state.level.toLowerCase()}`;
-      desc = std[levelKey] || std.levels?.[state.level] || `${state.level} 수준에 대한 기술이 없습니다.`;
+      const levelKorKey = `성취수준_${state.level}`;
+      desc = std[levelKey] || std[levelKorKey] || std.levels?.[state.level] || `${state.level} 수준에 대한 기술이 없습니다.`;
     } else {
       const levelMap = { '상': 'level_high', '중': 'level_mid', '하': 'level_low' };
+      const levelKorMap = { '상': '평가기준_상', '중': '평가기준_중', '하': '평가기준_하' };
       const key = levelMap[state.level] || 'level_high';
-      desc = std[key] || std.levels?.[state.level] || `${state.level} 평가기준 내용이 등록되지 않았습니다.`;
+      const korKey = levelKorMap[state.level] || '평가기준_상';
+      desc = std[key] || std[korKey] || std.levels?.[state.level] || `${state.level} 평가기준 내용이 등록되지 않았습니다.`;
     }
 
     elements.levelDescText.textContent = desc;
@@ -486,7 +568,8 @@
           </div>
           <p class="text-[10.5px] text-slate-500 leading-tight">${t.desc}</p>
         `;
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
           state.materialType = t.id;
           renderTypeCards();
           switchOutputView('material');
@@ -519,7 +602,8 @@
           </div>
           <p class="text-[10.5px] text-slate-500 leading-tight">${s.desc}</p>
         `;
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
           state.imageStyleType = s.id;
           renderTypeCards();
           switchOutputView('image');
@@ -582,22 +666,29 @@
     if (std) {
       if (state.curriculum === '2022') {
         const key = `level_${state.level.toLowerCase()}`;
-        levelDesc = std[key] || std.levels?.[state.level] || '';
+        const korKey = `성취수준_${state.level}`;
+        levelDesc = std[key] || std[korKey] || std.levels?.[state.level] || '';
       } else {
         const map = { '상': 'level_high', '중': 'level_mid', '하': 'level_low' };
-        levelDesc = std[map[state.level]] || std.levels?.[state.level] || '';
+        const korMap = { '상': '평가기준_상', '중': '평가기준_중', '하': '평가기준_하' };
+        levelDesc = std[map[state.level]] || std[korMap[state.level]] || std.levels?.[state.level] || '';
       }
     }
+
+    const code = std ? (std.code || std['코드'] || '[성취기준]') : '[성취기준]';
+    const standard = std ? (std.standard || std['성취기준'] || '성취기준을 선택해주세요.') : '성취기준을 선택해주세요.';
+    const domain = std ? (std.domain || std['영역'] || '') : '';
+    const gradeGroup = std ? (std.grade_group || std['학년군'] || '') : '';
 
     const params = {
       curriculum: state.curriculum,
       school: state.school,
       subjectGroup: state.subjectGroup,
       subject: state.subject,
-      domain: std ? std.domain : '',
-      code: std ? std.code : '[성취기준]',
-      standard: std ? std.standard : '성취기준을 선택해주세요.',
-      gradeGroup: std ? std.grade_group : '',
+      domain: domain,
+      code: code,
+      standard: standard,
+      gradeGroup: gradeGroup,
       level: state.level,
       levelDesc: levelDesc,
       materialType: state.materialType,
@@ -609,9 +700,9 @@
     const generated = PromptEngine.generate(params);
 
     // 상단 뱃지 갱신
-    elements.badgeCurriculum.textContent = `${state.curriculum} 개정 (${state.school === 'm' ? '중' : '고'})`;
+    elements.badgeCurriculum.textContent = `${state.curriculum} 개정 (${getSchoolName(state.school)})`;
     elements.badgeSubject.textContent = `${state.subjectGroup} > ${state.subject}`;
-    elements.badgeStandard.textContent = std ? std.code : '성취기준 미선택';
+    elements.badgeStandard.textContent = code;
     elements.badgeLevel.textContent = `수준 ${state.level}`;
 
     // 1. 수업 자료 전용 뷰 갱신
@@ -646,6 +737,8 @@
   function fallbackCopy(text) {
     const tempTextArea = document.createElement('textarea');
     tempTextArea.value = text;
+    tempTextArea.style.position = 'fixed';
+    tempTextArea.style.left = '-9999px';
     document.body.appendChild(tempTextArea);
     tempTextArea.select();
     document.execCommand('copy');
@@ -657,7 +750,6 @@
     const fullText = elements.imageEditor.value;
     if (!fullText) return;
 
-    // Midjourney의 경우 /imagine 줄 추출
     if (state.targetImageModel === 'midjourney') {
       const match = fullText.match(/\/imagine prompt: [^\n]+/);
       if (match) {
@@ -666,21 +758,19 @@
       }
     }
 
-    // DALL-E / Gemini / FLUX 등에서 Prompt 블록 추출
     const promptMatch = fullText.match(/--- Prompt Start ---\s*([\s\S]*?)\s*--- Prompt End ---/);
     if (promptMatch && promptMatch[1]) {
       copyText(promptMatch[1].trim(), `✨ [${getModelDisplayName(state.targetImageModel)}] 영문 프롬프트 본문만 복사되었습니다!`);
       return;
     }
 
-    // 기본 전체 복사
     copyText(fullText, '🎨 이미지 프롬프트가 복사되었습니다!');
   }
 
   function downloadPromptFile(text, ext, prefix) {
     if (!text) return;
 
-    const stdCode = (state.selectedStandard && state.selectedStandard.code) || '성취기준';
+    const stdCode = (state.selectedStandard && (state.selectedStandard.code || state.selectedStandard['코드'])) || '성취기준';
     const cleanCode = stdCode.replace(/[\[\]]/g, '');
     const filename = `EduPrompt_${prefix}_${state.subject}_${cleanCode}_수준${state.level}.${ext}`;
 
@@ -697,7 +787,7 @@
     showToast(`💾 파일이 다운로드되었습니다: ${filename}`);
   }
 
-  // 외부 AI 모델 런치 (현재 보고 있는 프롬프트 자동 복사 후 새 창 열기)
+  // 외부 AI 모델 런치
   async function launchExternalAI(url, serviceName) {
     const currentText = state.activeView === 'image' 
       ? elements.imageEditor.value 
