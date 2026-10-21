@@ -253,3 +253,28 @@ body {
 .toast-enter {
   animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Model Selector Chips */
+.model-chip-btn {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.model-chip-btn:hover {
+  background: #fdf2f8;
+  border-color: #fbcfe8;
+  color: #db2777;
+  transform: translateY(-1px);
+}
+
+.model-chip-btn.active {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  border-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+}
