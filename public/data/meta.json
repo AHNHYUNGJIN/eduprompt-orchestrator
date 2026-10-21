@@ -1,0 +1,3839 @@
+{
+  "version": "2026.1",
+  "total_standards": 9126,
+  "curriculums": [
+    {
+      "id": "2022",
+      "name": "2022 개정 교육과정",
+      "badge": "최신 고시",
+      "levels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "schools": [
+        {
+          "id": "m",
+          "name": "중학교",
+          "file": "data/standards_2022_m.json"
+        },
+        {
+          "id": "h",
+          "name": "고등학교",
+          "file": "data/standards_2022_h.json"
+        }
+      ]
+    },
+    {
+      "id": "2015",
+      "name": "2015 개정 교육과정",
+      "badge": "기존 고시",
+      "levels": [
+        "상",
+        "중",
+        "하"
+      ],
+      "schools": [
+        {
+          "id": "m",
+          "name": "중학교",
+          "file": "data/standards_2015_m.json"
+        },
+        {
+          "id": "h",
+          "name": "고등학교",
+          "file": "data/standards_2015_h.json"
+        }
+      ]
+    }
+  ],
+  "tree": {
+    "2022": {
+      "중학교": [
+        {
+          "group": "과학",
+          "total": 87,
+          "subjects": [
+            {
+              "name": "과학",
+              "count": 87
+            }
+          ]
+        },
+        {
+          "group": "국어",
+          "total": 51,
+          "subjects": [
+            {
+              "name": "국어",
+              "count": 51
+            }
+          ]
+        },
+        {
+          "group": "기술·가정",
+          "total": 52,
+          "subjects": [
+            {
+              "name": "기술·가정",
+              "count": 52
+            }
+          ]
+        },
+        {
+          "group": "도덕",
+          "total": 22,
+          "subjects": [
+            {
+              "name": "도덕",
+              "count": 22
+            }
+          ]
+        },
+        {
+          "group": "미술",
+          "total": 13,
+          "subjects": [
+            {
+              "name": "미술",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "group": "사회",
+          "total": 114,
+          "subjects": [
+            {
+              "name": "사회",
+              "count": 74
+            },
+            {
+              "name": "역사",
+              "count": 40
+            }
+          ]
+        },
+        {
+          "group": "수학",
+          "total": 60,
+          "subjects": [
+            {
+              "name": "수학",
+              "count": 60
+            }
+          ]
+        },
+        {
+          "group": "영어",
+          "total": 21,
+          "subjects": [
+            {
+              "name": "영어",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "group": "음악",
+          "total": 13,
+          "subjects": [
+            {
+              "name": "음악",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "group": "정보",
+          "total": 25,
+          "subjects": [
+            {
+              "name": "정보",
+              "count": 25
+            }
+          ]
+        },
+        {
+          "group": "중학교 선택",
+          "total": 193,
+          "subjects": [
+            {
+              "name": "보건",
+              "count": 26
+            },
+            {
+              "name": "생활 독일어",
+              "count": 16
+            },
+            {
+              "name": "생활 러시아어",
+              "count": 15
+            },
+            {
+              "name": "생활 베트남어",
+              "count": 18
+            },
+            {
+              "name": "생활 스페인어",
+              "count": 18
+            },
+            {
+              "name": "생활 아랍어",
+              "count": 16
+            },
+            {
+              "name": "생활 일본어",
+              "count": 18
+            },
+            {
+              "name": "생활 중국어",
+              "count": 17
+            },
+            {
+              "name": "생활 프랑스어",
+              "count": 16
+            },
+            {
+              "name": "진로와 직업",
+              "count": 14
+            },
+            {
+              "name": "환경",
+              "count": 19
+            }
+          ]
+        },
+        {
+          "group": "체육",
+          "total": 51,
+          "subjects": [
+            {
+              "name": "체육",
+              "count": 51
+            }
+          ]
+        },
+        {
+          "group": "한문",
+          "total": 12,
+          "subjects": [
+            {
+              "name": "한문",
+              "count": 12
+            }
+          ]
+        }
+      ],
+      "고등학교": [
+        {
+          "group": "과학",
+          "total": 284,
+          "subjects": [
+            {
+              "name": "과학의 역사와 문화",
+              "count": 17
+            },
+            {
+              "name": "과학탐구실험1",
+              "count": 6
+            },
+            {
+              "name": "과학탐구실험2",
+              "count": 6
+            },
+            {
+              "name": "기후변화와 환경생태",
+              "count": 15
+            },
+            {
+              "name": "물리학",
+              "count": 18
+            },
+            {
+              "name": "물질과 에너지",
+              "count": 14
+            },
+            {
+              "name": "생명과학",
+              "count": 19
+            },
+            {
+              "name": "생물의 유전",
+              "count": 17
+            },
+            {
+              "name": "세포와 물질대사",
+              "count": 18
+            },
+            {
+              "name": "역학과 에너지",
+              "count": 16
+            },
+            {
+              "name": "융합과학 탐구",
+              "count": 15
+            },
+            {
+              "name": "전자기와 양자",
+              "count": 17
+            },
+            {
+              "name": "지구과학",
+              "count": 16
+            },
+            {
+              "name": "지구시스템과학",
+              "count": 15
+            },
+            {
+              "name": "통합과학1",
+              "count": 16
+            },
+            {
+              "name": "통합과학2",
+              "count": 15
+            },
+            {
+              "name": "행성우주과학",
+              "count": 15
+            },
+            {
+              "name": "화학",
+              "count": 15
+            },
+            {
+              "name": "화학 반응의 세계",
+              "count": 14
+            }
+          ]
+        },
+        {
+          "group": "과학계열",
+          "total": 389,
+          "subjects": [
+            {
+              "name": "고급 기하",
+              "count": 18
+            },
+            {
+              "name": "고급 대수",
+              "count": 20
+            },
+            {
+              "name": "고급 물리학",
+              "count": 22
+            },
+            {
+              "name": "고급 미적분",
+              "count": 22
+            },
+            {
+              "name": "고급 생명과학",
+              "count": 21
+            },
+            {
+              "name": "고급 지구과학",
+              "count": 33
+            },
+            {
+              "name": "고급 화학",
+              "count": 33
+            },
+            {
+              "name": "과학과제 연구",
+              "count": 12
+            },
+            {
+              "name": "물리학 실험",
+              "count": 35
+            },
+            {
+              "name": "생명과학 실험",
+              "count": 40
+            },
+            {
+              "name": "이산 수학",
+              "count": 21
+            },
+            {
+              "name": "전문 수학",
+              "count": 24
+            },
+            {
+              "name": "정보과학",
+              "count": 18
+            },
+            {
+              "name": "지구과학 실험",
+              "count": 38
+            },
+            {
+              "name": "화학 실험",
+              "count": 32
+            }
+          ]
+        },
+        {
+          "group": "교양",
+          "total": 155,
+          "subjects": [
+            {
+              "name": "교육의 이해",
+              "count": 10
+            },
+            {
+              "name": "논리와 사고",
+              "count": 14
+            },
+            {
+              "name": "논술",
+              "count": 12
+            },
+            {
+              "name": "보건",
+              "count": 26
+            },
+            {
+              "name": "삶과 종교",
+              "count": 14
+            },
+            {
+              "name": "인간과 경제활동",
+              "count": 12
+            },
+            {
+              "name": "인간과 심리",
+              "count": 15
+            },
+            {
+              "name": "인간과 철학",
+              "count": 16
+            },
+            {
+              "name": "진로와 직업",
+              "count": 15
+            },
+            {
+              "name": "환경",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "group": "국어",
+          "total": 119,
+          "subjects": [
+            {
+              "name": "공통 국어1",
+              "count": 14
+            },
+            {
+              "name": "공통국어2",
+              "count": 15
+            },
+            {
+              "name": "독서 토론과 글쓰기",
+              "count": 7
+            },
+            {
+              "name": "독서와 작문",
+              "count": 15
+            },
+            {
+              "name": "매체 의사소통",
+              "count": 7
+            },
+            {
+              "name": "문학",
+              "count": 12
+            },
+            {
+              "name": "문학과 영상",
+              "count": 10
+            },
+            {
+              "name": "언어생활 탐구",
+              "count": 7
+            },
+            {
+              "name": "주제 탐구 독서",
+              "count": 7
+            },
+            {
+              "name": "직무 의사소통",
+              "count": 10
+            },
+            {
+              "name": "화법과 언어",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "group": "기술·가정",
+          "total": 124,
+          "subjects": [
+            {
+              "name": "기술·가정",
+              "count": 30
+            },
+            {
+              "name": "로봇과 공학세계",
+              "count": 17
+            },
+            {
+              "name": "생애 설계와 자립",
+              "count": 14
+            },
+            {
+              "name": "생활과학 탐구",
+              "count": 14
+            },
+            {
+              "name": "아동발달과 부모",
+              "count": 15
+            },
+            {
+              "name": "지식 재산 일반",
+              "count": 17
+            },
+            {
+              "name": "창의 공학 설계",
+              "count": 17
+            }
+          ]
+        },
+        {
+          "group": "도덕",
+          "total": 57,
+          "subjects": [
+            {
+              "name": "윤리문제 탐구",
+              "count": 13
+            },
+            {
+              "name": "윤리와 사상",
+              "count": 15
+            },
+            {
+              "name": "인문학과 윤리",
+              "count": 12
+            },
+            {
+              "name": "현대사회와 윤리",
+              "count": 17
+            }
+          ]
+        },
+        {
+          "group": "미술",
+          "total": 36,
+          "subjects": [
+            {
+              "name": "미술",
+              "count": 12
+            },
+            {
+              "name": "미술 감상과 비평",
+              "count": 8
+            },
+            {
+              "name": "미술 창작",
+              "count": 8
+            },
+            {
+              "name": "미술과 매체",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "group": "사회",
+          "total": 225,
+          "subjects": [
+            {
+              "name": "경제",
+              "count": 12
+            },
+            {
+              "name": "국제관계의 이해",
+              "count": 12
+            },
+            {
+              "name": "금융과 경제생활",
+              "count": 12
+            },
+            {
+              "name": "기후변화와 지속가능한 세계",
+              "count": 12
+            },
+            {
+              "name": "도시의 미래 탐구",
+              "count": 12
+            },
+            {
+              "name": "동아시아 역사 기행",
+              "count": 12
+            },
+            {
+              "name": "법과 사회",
+              "count": 13
+            },
+            {
+              "name": "사회문제 탐구",
+              "count": 12
+            },
+            {
+              "name": "사회와 문화",
+              "count": 15
+            },
+            {
+              "name": "세계사",
+              "count": 13
+            },
+            {
+              "name": "세계시민과 지리",
+              "count": 13
+            },
+            {
+              "name": "여행지리",
+              "count": 12
+            },
+            {
+              "name": "역사로 탐구하는 현대 세계",
+              "count": 14
+            },
+            {
+              "name": "정치",
+              "count": 16
+            },
+            {
+              "name": "통합사회1",
+              "count": 14
+            },
+            {
+              "name": "통합사회2",
+              "count": 16
+            },
+            {
+              "name": "한국지리 탐구",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "group": "수학",
+          "total": 254,
+          "subjects": [
+            {
+              "name": "경제 수학",
+              "count": 18
+            },
+            {
+              "name": "공통수학1",
+              "count": 19
+            },
+            {
+              "name": "공통수학2",
+              "count": 20
+            },
+            {
+              "name": "기본수학1",
+              "count": 17
+            },
+            {
+              "name": "기본수학2",
+              "count": 17
+            },
+            {
+              "name": "기하",
+              "count": 14
+            },
+            {
+              "name": "대수",
+              "count": 18
+            },
+            {
+              "name": "미적분Ⅰ",
+              "count": 20
+            },
+            {
+              "name": "미적분Ⅱ",
+              "count": 23
+            },
+            {
+              "name": "수학과 문화",
+              "count": 16
+            },
+            {
+              "name": "수학과제 탐구",
+              "count": 10
+            },
+            {
+              "name": "실용 통계",
+              "count": 13
+            },
+            {
+              "name": "인공지능 수학",
+              "count": 15
+            },
+            {
+              "name": "직무 수학",
+              "count": 18
+            },
+            {
+              "name": "확률과 통계",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "group": "역사",
+          "total": 26,
+          "subjects": [
+            {
+              "name": "한국사1",
+              "count": 13
+            },
+            {
+              "name": "한국사2",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "group": "영어",
+          "total": 209,
+          "subjects": [
+            {
+              "name": "공통영어1",
+              "count": 16
+            },
+            {
+              "name": "공통영어2",
+              "count": 17
+            },
+            {
+              "name": "기본영어1",
+              "count": 16
+            },
+            {
+              "name": "기본영어2",
+              "count": 16
+            },
+            {
+              "name": "미디어 영어",
+              "count": 10
+            },
+            {
+              "name": "세계 문화와 영어",
+              "count": 10
+            },
+            {
+              "name": "실생활 영어 회화",
+              "count": 9
+            },
+            {
+              "name": "심화 영어",
+              "count": 16
+            },
+            {
+              "name": "심화 영어 독해와 작문",
+              "count": 17
+            },
+            {
+              "name": "영미 문학 읽기",
+              "count": 8
+            },
+            {
+              "name": "영어 독해와 작문",
+              "count": 17
+            },
+            {
+              "name": "영어 발표와 토론",
+              "count": 16
+            },
+            {
+              "name": "영어Ⅰ",
+              "count": 16
+            },
+            {
+              "name": "영어Ⅱ",
+              "count": 17
+            },
+            {
+              "name": "직무 영어",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "group": "예술 계열",
+          "total": 486,
+          "subjects": [
+            {
+              "name": "극 창작",
+              "count": 10
+            },
+            {
+              "name": "드로잉",
+              "count": 10
+            },
+            {
+              "name": "무대미술과 기술",
+              "count": 20
+            },
+            {
+              "name": "무용 감상과 비평",
+              "count": 6
+            },
+            {
+              "name": "무용 기초 실기",
+              "count": 7
+            },
+            {
+              "name": "무용 전공 실기",
+              "count": 8
+            },
+            {
+              "name": "무용 제작 실습",
+              "count": 8
+            },
+            {
+              "name": "무용과 매체",
+              "count": 7
+            },
+            {
+              "name": "무용과 몸",
+              "count": 7
+            },
+            {
+              "name": "무용의 이해",
+              "count": 7
+            },
+            {
+              "name": "문예 창작의 이해",
+              "count": 10
+            },
+            {
+              "name": "문장론",
+              "count": 10
+            },
+            {
+              "name": "문학 감상과 비평",
+              "count": 10
+            },
+            {
+              "name": "문학과 매체",
+              "count": 10
+            },
+            {
+              "name": "미술 매체 탐구",
+              "count": 10
+            },
+            {
+              "name": "미술 이론",
+              "count": 14
+            },
+            {
+              "name": "미술 전공 실기",
+              "count": 12
+            },
+            {
+              "name": "미술과 사회",
+              "count": 10
+            },
+            {
+              "name": "미술사",
+              "count": 10
+            },
+            {
+              "name": "사진 감상과 비평",
+              "count": 7
+            },
+            {
+              "name": "사진 촬영",
+              "count": 10
+            },
+            {
+              "name": "사진 표현 기법",
+              "count": 8
+            },
+            {
+              "name": "사진과 삶",
+              "count": 8
+            },
+            {
+              "name": "사진의 이해",
+              "count": 9
+            },
+            {
+              "name": "소설 창작",
+              "count": 10
+            },
+            {
+              "name": "시 창작",
+              "count": 10
+            },
+            {
+              "name": "시창•청음",
+              "count": 8
+            },
+            {
+              "name": "안무",
+              "count": 8
+            },
+            {
+              "name": "연극",
+              "count": 13
+            },
+            {
+              "name": "연극 감상과 비평",
+              "count": 12
+            },
+            {
+              "name": "연극 제작 실습",
+              "count": 14
+            },
+            {
+              "name": "연극과 말",
+              "count": 13
+            },
+            {
+              "name": "연극과 몸",
+              "count": 12
+            },
+            {
+              "name": "연극과 삶",
+              "count": 12
+            },
+            {
+              "name": "연기",
+              "count": 15
+            },
+            {
+              "name": "영상 제작의 이해",
+              "count": 8
+            },
+            {
+              "name": "영화 감상과 비평",
+              "count": 9
+            },
+            {
+              "name": "영화 제작 실습",
+              "count": 12
+            },
+            {
+              "name": "영화와 삶",
+              "count": 8
+            },
+            {
+              "name": "영화의 이해",
+              "count": 15
+            },
+            {
+              "name": "음악 공연 실습",
+              "count": 8
+            },
+            {
+              "name": "음악 이론",
+              "count": 8
+            },
+            {
+              "name": "음악 전공 실기",
+              "count": 8
+            },
+            {
+              "name": "음악과 문화",
+              "count": 8
+            },
+            {
+              "name": "음악사",
+              "count": 8
+            },
+            {
+              "name": "조형 탐구",
+              "count": 11
+            },
+            {
+              "name": "촬영•조명",
+              "count": 10
+            },
+            {
+              "name": "편집•사운드",
+              "count": 10
+            },
+            {
+              "name": "합창•합주",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "group": "음악",
+          "total": 37,
+          "subjects": [
+            {
+              "name": "음악",
+              "count": 13
+            },
+            {
+              "name": "음악 감상과 비평",
+              "count": 8
+            },
+            {
+              "name": "음악 연주와 창작",
+              "count": 8
+            },
+            {
+              "name": "음악과 미디어",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "group": "정보",
+          "total": 80,
+          "subjects": [
+            {
+              "name": "데이터 과학",
+              "count": 19
+            },
+            {
+              "name": "소프트웨어와 생활",
+              "count": 19
+            },
+            {
+              "name": "인공지능 기초",
+              "count": 19
+            },
+            {
+              "name": "정보",
+              "count": 23
+            }
+          ]
+        },
+        {
+          "group": "제2외국어",
+          "total": 607,
+          "subjects": [
+            {
+              "name": "독일어",
+              "count": 18
+            },
+            {
+              "name": "독일어 회화",
+              "count": 10
+            },
+            {
+              "name": "독일어권 문화",
+              "count": 7
+            },
+            {
+              "name": "러시아 문화",
+              "count": 7
+            },
+            {
+              "name": "러시아어",
+              "count": 19
+            },
+            {
+              "name": "러시아어 회화",
+              "count": 10
+            },
+            {
+              "name": "베트남 문화",
+              "count": 7
+            },
+            {
+              "name": "베트남어",
+              "count": 21
+            },
+            {
+              "name": "베트남어 회화",
+              "count": 10
+            },
+            {
+              "name": "생활 독일어",
+              "count": 16
+            },
+            {
+              "name": "생활 러시아어",
+              "count": 15
+            },
+            {
+              "name": "생활 베트남어",
+              "count": 18
+            },
+            {
+              "name": "생활 스페인어",
+              "count": 18
+            },
+            {
+              "name": "생활 아랍어",
+              "count": 16
+            },
+            {
+              "name": "생활 일본어",
+              "count": 18
+            },
+            {
+              "name": "생활 중국어",
+              "count": 17
+            },
+            {
+              "name": "생활 프랑스어",
+              "count": 16
+            },
+            {
+              "name": "스페인어",
+              "count": 22
+            },
+            {
+              "name": "스페인어 회화",
+              "count": 10
+            },
+            {
+              "name": "스페인어권 문화",
+              "count": 7
+            },
+            {
+              "name": "심화 독일어",
+              "count": 18
+            },
+            {
+              "name": "심화 러시아어",
+              "count": 19
+            },
+            {
+              "name": "심화 베트남어",
+              "count": 20
+            },
+            {
+              "name": "심화 스페인어",
+              "count": 21
+            },
+            {
+              "name": "심화 아랍어",
+              "count": 25
+            },
+            {
+              "name": "심화 일본어",
+              "count": 22
+            },
+            {
+              "name": "심화 중국어",
+              "count": 22
+            },
+            {
+              "name": "심화 프랑스어",
+              "count": 20
+            },
+            {
+              "name": "아랍 문화",
+              "count": 8
+            },
+            {
+              "name": "아랍어",
+              "count": 20
+            },
+            {
+              "name": "아랍어 회화",
+              "count": 13
+            },
+            {
+              "name": "일본 문화",
+              "count": 8
+            },
+            {
+              "name": "일본어",
+              "count": 22
+            },
+            {
+              "name": "일본어 회화",
+              "count": 11
+            },
+            {
+              "name": "중국 문화",
+              "count": 7
+            },
+            {
+              "name": "중국어",
+              "count": 21
+            },
+            {
+              "name": "중국어 회화",
+              "count": 11
+            },
+            {
+              "name": "프랑스어",
+              "count": 19
+            },
+            {
+              "name": "프랑스어 회화",
+              "count": 11
+            },
+            {
+              "name": "프랑스어권 문화",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "group": "체육",
+          "total": 48,
+          "subjects": [
+            {
+              "name": "스포츠 과학",
+              "count": 6
+            },
+            {
+              "name": "스포츠 문화",
+              "count": 6
+            },
+            {
+              "name": "스포츠 생활1",
+              "count": 6
+            },
+            {
+              "name": "스포츠 생활2",
+              "count": 6
+            },
+            {
+              "name": "운동과 건강",
+              "count": 6
+            },
+            {
+              "name": "체육1",
+              "count": 9
+            },
+            {
+              "name": "체육2",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "group": "체육 계열",
+          "total": 91,
+          "subjects": [
+            {
+              "name": "고급 체육 전공 실기",
+              "count": 6
+            },
+            {
+              "name": "기초 체육 전공 실기",
+              "count": 6
+            },
+            {
+              "name": "수상 스포츠",
+              "count": 8
+            },
+            {
+              "name": "스포츠 개론",
+              "count": 7
+            },
+            {
+              "name": "스포츠 경기 기술",
+              "count": 6
+            },
+            {
+              "name": "스포츠 경기 분석",
+              "count": 6
+            },
+            {
+              "name": "스포츠 경기 체력",
+              "count": 6
+            },
+            {
+              "name": "스포츠 교육",
+              "count": 8
+            },
+            {
+              "name": "스포츠 생리의학",
+              "count": 8
+            },
+            {
+              "name": "스포츠 행정 및 경영",
+              "count": 8
+            },
+            {
+              "name": "심화 체육 전공 실기",
+              "count": 6
+            },
+            {
+              "name": "육상",
+              "count": 8
+            },
+            {
+              "name": "체조",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "group": "한문",
+          "total": 33,
+          "subjects": [
+            {
+              "name": "언어생활과 한자",
+              "count": 10
+            },
+            {
+              "name": "한문",
+              "count": 14
+            },
+            {
+              "name": "한문 고전 읽기",
+              "count": 9
+            }
+          ]
+        }
+      ]
+    },
+    "2015": {
+      "중학교": [
+        {
+          "group": "과학",
+          "total": 92,
+          "subjects": [
+            {
+              "name": "과학",
+              "count": 92
+            }
+          ]
+        },
+        {
+          "group": "국어",
+          "total": 51,
+          "subjects": [
+            {
+              "name": "국어",
+              "count": 51
+            }
+          ]
+        },
+        {
+          "group": "기술·가정",
+          "total": 54,
+          "subjects": [
+            {
+              "name": "기술·가정",
+              "count": 54
+            }
+          ]
+        },
+        {
+          "group": "도덕",
+          "total": 23,
+          "subjects": [
+            {
+              "name": "도덕",
+              "count": 23
+            }
+          ]
+        },
+        {
+          "group": "미술",
+          "total": 15,
+          "subjects": [
+            {
+              "name": "미술",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "group": "사회",
+          "total": 119,
+          "subjects": [
+            {
+              "name": "사회",
+              "count": 74
+            },
+            {
+              "name": "역사",
+              "count": 45
+            }
+          ]
+        },
+        {
+          "group": "수학",
+          "total": 61,
+          "subjects": [
+            {
+              "name": "수학",
+              "count": 61
+            }
+          ]
+        },
+        {
+          "group": "영어",
+          "total": 34,
+          "subjects": [
+            {
+              "name": "영어",
+              "count": 34
+            }
+          ]
+        },
+        {
+          "group": "음악",
+          "total": 11,
+          "subjects": [
+            {
+              "name": "음악",
+              "count": 11
+            }
+          ]
+        },
+        {
+          "group": "정보",
+          "total": 17,
+          "subjects": [
+            {
+              "name": "정보",
+              "count": 17
+            }
+          ]
+        },
+        {
+          "group": "중학교 선택",
+          "total": 202,
+          "subjects": [
+            {
+              "name": "보건",
+              "count": 32
+            },
+            {
+              "name": "생활 독일어",
+              "count": 16
+            },
+            {
+              "name": "생활 러시아어",
+              "count": 14
+            },
+            {
+              "name": "생활 베트남어",
+              "count": 13
+            },
+            {
+              "name": "생활 스페인어",
+              "count": 12
+            },
+            {
+              "name": "생활 아랍어",
+              "count": 15
+            },
+            {
+              "name": "생활 일본어",
+              "count": 20
+            },
+            {
+              "name": "생활 중국어",
+              "count": 17
+            },
+            {
+              "name": "생활 프랑스어",
+              "count": 15
+            },
+            {
+              "name": "진로와 직업",
+              "count": 18
+            },
+            {
+              "name": "환경",
+              "count": 30
+            }
+          ]
+        },
+        {
+          "group": "체육",
+          "total": 54,
+          "subjects": [
+            {
+              "name": "체육",
+              "count": 54
+            }
+          ]
+        },
+        {
+          "group": "한문",
+          "total": 19,
+          "subjects": [
+            {
+              "name": "한문",
+              "count": 19
+            }
+          ]
+        }
+      ],
+      "고등학교": [
+        {
+          "group": "과학",
+          "total": 370,
+          "subjects": [
+            {
+              "name": "과학사",
+              "count": 30
+            },
+            {
+              "name": "과학탐구실험",
+              "count": 15
+            },
+            {
+              "name": "물리학 I",
+              "count": 23
+            },
+            {
+              "name": "물리학 II",
+              "count": 27
+            },
+            {
+              "name": "생명과학Ⅰ",
+              "count": 23
+            },
+            {
+              "name": "생명과학Ⅱ",
+              "count": 30
+            },
+            {
+              "name": "생활과 과학",
+              "count": 32
+            },
+            {
+              "name": "융합과학",
+              "count": 44
+            },
+            {
+              "name": "지구과학Ⅰ",
+              "count": 26
+            },
+            {
+              "name": "지구과학Ⅱ",
+              "count": 37
+            },
+            {
+              "name": "통합과학",
+              "count": 32
+            },
+            {
+              "name": "화학Ⅰ",
+              "count": 23
+            },
+            {
+              "name": "화학Ⅱ",
+              "count": 28
+            }
+          ]
+        },
+        {
+          "group": "과학계열",
+          "total": 772,
+          "subjects": [
+            {
+              "name": "고급 물리학",
+              "count": 69
+            },
+            {
+              "name": "고급 생명과학",
+              "count": 52
+            },
+            {
+              "name": "고급 지구과학",
+              "count": 71
+            },
+            {
+              "name": "고급 화학",
+              "count": 134
+            },
+            {
+              "name": "고급수학 I",
+              "count": 27
+            },
+            {
+              "name": "고급수학 II",
+              "count": 28
+            },
+            {
+              "name": "과학과제 연구",
+              "count": 13
+            },
+            {
+              "name": "물리학 실험",
+              "count": 51
+            },
+            {
+              "name": "생명과학 실험",
+              "count": 45
+            },
+            {
+              "name": "생태와 환경",
+              "count": 20
+            },
+            {
+              "name": "심화 수학 I",
+              "count": 52
+            },
+            {
+              "name": "심화 수학 II",
+              "count": 39
+            },
+            {
+              "name": "융합과학 탐구",
+              "count": 14
+            },
+            {
+              "name": "정보과학",
+              "count": 25
+            },
+            {
+              "name": "지구과학 실험",
+              "count": 58
+            },
+            {
+              "name": "화학 실험",
+              "count": 74
+            }
+          ]
+        },
+        {
+          "group": "교양",
+          "total": 271,
+          "subjects": [
+            {
+              "name": "교육학",
+              "count": 20
+            },
+            {
+              "name": "논리학",
+              "count": 21
+            },
+            {
+              "name": "논술",
+              "count": 29
+            },
+            {
+              "name": "보건",
+              "count": 35
+            },
+            {
+              "name": "실용경제",
+              "count": 15
+            },
+            {
+              "name": "심리학",
+              "count": 24
+            },
+            {
+              "name": "종교학",
+              "count": 41
+            },
+            {
+              "name": "진로와 직업",
+              "count": 38
+            },
+            {
+              "name": "철학",
+              "count": 12
+            },
+            {
+              "name": "환경",
+              "count": 36
+            }
+          ]
+        },
+        {
+          "group": "국어",
+          "total": 136,
+          "subjects": [
+            {
+              "name": "고전 읽기",
+              "count": 8
+            },
+            {
+              "name": "국어",
+              "count": 26
+            },
+            {
+              "name": "독서",
+              "count": 15
+            },
+            {
+              "name": "문학",
+              "count": 15
+            },
+            {
+              "name": "실용 국어",
+              "count": 12
+            },
+            {
+              "name": "심화 국어",
+              "count": 12
+            },
+            {
+              "name": "언어와 매체",
+              "count": 24
+            },
+            {
+              "name": "화법과 작문",
+              "count": 24
+            }
+          ]
+        },
+        {
+          "group": "국제 계열",
+          "total": 232,
+          "subjects": [
+            {
+              "name": "국제 관계와 국제기구",
+              "count": 22
+            },
+            {
+              "name": "국제 정치",
+              "count": 17
+            },
+            {
+              "name": "국제경제",
+              "count": 24
+            },
+            {
+              "name": "국제법",
+              "count": 18
+            },
+            {
+              "name": "비교 문화",
+              "count": 23
+            },
+            {
+              "name": "사회 탐구 방법",
+              "count": 21
+            },
+            {
+              "name": "사회과제 연구",
+              "count": 19
+            },
+            {
+              "name": "세계문제와 미래사회",
+              "count": 26
+            },
+            {
+              "name": "지역 이해",
+              "count": 27
+            },
+            {
+              "name": "한국사회의 이해",
+              "count": 20
+            },
+            {
+              "name": "현대 세계의 변화",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "group": "기술·가정",
+          "total": 185,
+          "subjects": [
+            {
+              "name": "가정과학",
+              "count": 19
+            },
+            {
+              "name": "공학 일반",
+              "count": 17
+            },
+            {
+              "name": "기술·가정",
+              "count": 32
+            },
+            {
+              "name": "농업 생명 과학",
+              "count": 31
+            },
+            {
+              "name": "지식 재산 일반",
+              "count": 27
+            },
+            {
+              "name": "창의 경영",
+              "count": 24
+            },
+            {
+              "name": "해양 문화와 기술",
+              "count": 35
+            }
+          ]
+        },
+        {
+          "group": "도덕",
+          "total": 52,
+          "subjects": [
+            {
+              "name": "고전과 윤리",
+              "count": 12
+            },
+            {
+              "name": "생활과 윤리",
+              "count": 18
+            },
+            {
+              "name": "윤리와 사상",
+              "count": 22
+            }
+          ]
+        },
+        {
+          "group": "미술",
+          "total": 43,
+          "subjects": [
+            {
+              "name": "미술",
+              "count": 13
+            },
+            {
+              "name": "미술 감상과 비평",
+              "count": 15
+            },
+            {
+              "name": "미술 창작",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "group": "사회",
+          "total": 219,
+          "subjects": [
+            {
+              "name": "경제",
+              "count": 19
+            },
+            {
+              "name": "동아시아사",
+              "count": 16
+            },
+            {
+              "name": "사회문제탐구",
+              "count": 24
+            },
+            {
+              "name": "사회문화",
+              "count": 20
+            },
+            {
+              "name": "세계사",
+              "count": 16
+            },
+            {
+              "name": "세계지리",
+              "count": 28
+            },
+            {
+              "name": "여행지리",
+              "count": 21
+            },
+            {
+              "name": "정치와법",
+              "count": 18
+            },
+            {
+              "name": "통합사회",
+              "count": 29
+            },
+            {
+              "name": "한국지리",
+              "count": 28
+            }
+          ]
+        },
+        {
+          "group": "수학",
+          "total": 213,
+          "subjects": [
+            {
+              "name": "경제 수학",
+              "count": 23
+            },
+            {
+              "name": "기본 수학",
+              "count": 27
+            },
+            {
+              "name": "기하",
+              "count": 16
+            },
+            {
+              "name": "미적분",
+              "count": 27
+            },
+            {
+              "name": "수학",
+              "count": 41
+            },
+            {
+              "name": "수학Ⅰ",
+              "count": 19
+            },
+            {
+              "name": "수학Ⅱ",
+              "count": 21
+            },
+            {
+              "name": "수학과제 탐구",
+              "count": 8
+            },
+            {
+              "name": "실용 수학",
+              "count": 14
+            },
+            {
+              "name": "확률과 통계",
+              "count": 17
+            }
+          ]
+        },
+        {
+          "group": "연극",
+          "total": 19,
+          "subjects": [
+            {
+              "name": "연극",
+              "count": 19
+            }
+          ]
+        },
+        {
+          "group": "영어",
+          "total": 158,
+          "subjects": [
+            {
+              "name": "실용 영어",
+              "count": 17
+            },
+            {
+              "name": "영미문학 읽기",
+              "count": 14
+            },
+            {
+              "name": "영어",
+              "count": 21
+            },
+            {
+              "name": "영어 독해와 작문",
+              "count": 12
+            },
+            {
+              "name": "영어 회화",
+              "count": 10
+            },
+            {
+              "name": "영어Ⅰ",
+              "count": 22
+            },
+            {
+              "name": "영어Ⅱ",
+              "count": 23
+            },
+            {
+              "name": "영어권 문화",
+              "count": 18
+            },
+            {
+              "name": "진로 영어",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "group": "예술 계열",
+          "total": 621,
+          "subjects": [
+            {
+              "name": "고전문학 감상",
+              "count": 14
+            },
+            {
+              "name": "공연실습",
+              "count": 6
+            },
+            {
+              "name": "극 창작",
+              "count": 15
+            },
+            {
+              "name": "기초 촬영",
+              "count": 10
+            },
+            {
+              "name": "드로잉",
+              "count": 12
+            },
+            {
+              "name": "매체 미술",
+              "count": 14
+            },
+            {
+              "name": "무대기술",
+              "count": 25
+            },
+            {
+              "name": "무용 감상과 비평",
+              "count": 8
+            },
+            {
+              "name": "무용 기초 실기",
+              "count": 8
+            },
+            {
+              "name": "무용 음악 실습",
+              "count": 8
+            },
+            {
+              "name": "무용 전공 실기",
+              "count": 9
+            },
+            {
+              "name": "무용과 매체",
+              "count": 8
+            },
+            {
+              "name": "무용과 몸",
+              "count": 8
+            },
+            {
+              "name": "무용의 이해",
+              "count": 8
+            },
+            {
+              "name": "문예 창작 입문",
+              "count": 12
+            },
+            {
+              "name": "문장론",
+              "count": 12
+            },
+            {
+              "name": "문학 개론",
+              "count": 12
+            },
+            {
+              "name": "문학과 매체",
+              "count": 16
+            },
+            {
+              "name": "미술 이론",
+              "count": 17
+            },
+            {
+              "name": "미술 전공 실기",
+              "count": 14
+            },
+            {
+              "name": "미술사",
+              "count": 14
+            },
+            {
+              "name": "사진 감상과 비평",
+              "count": 8
+            },
+            {
+              "name": "사진 영상 편집",
+              "count": 8
+            },
+            {
+              "name": "사진 표현 기법",
+              "count": 12
+            },
+            {
+              "name": "사진의 이해",
+              "count": 16
+            },
+            {
+              "name": "소설 창작",
+              "count": 13
+            },
+            {
+              "name": "시 창작",
+              "count": 13
+            },
+            {
+              "name": "시나리오",
+              "count": 26
+            },
+            {
+              "name": "시창청음",
+              "count": 2
+            },
+            {
+              "name": "안무",
+              "count": 9
+            },
+            {
+              "name": "암실 실기",
+              "count": 8
+            },
+            {
+              "name": "연극 감상과 비평",
+              "count": 23
+            },
+            {
+              "name": "연극 제작 실습",
+              "count": 27
+            },
+            {
+              "name": "연극의 이해",
+              "count": 19
+            },
+            {
+              "name": "연기",
+              "count": 25
+            },
+            {
+              "name": "영상 제작의 이해",
+              "count": 13
+            },
+            {
+              "name": "영화 감상과 비평",
+              "count": 11
+            },
+            {
+              "name": "영화 제작 실습",
+              "count": 14
+            },
+            {
+              "name": "영화기술",
+              "count": 20
+            },
+            {
+              "name": "영화의 이해",
+              "count": 19
+            },
+            {
+              "name": "음악 전공 실기",
+              "count": 4
+            },
+            {
+              "name": "음악사",
+              "count": 6
+            },
+            {
+              "name": "음악이론",
+              "count": 13
+            },
+            {
+              "name": "입체조형",
+              "count": 16
+            },
+            {
+              "name": "중급 촬영",
+              "count": 10
+            },
+            {
+              "name": "평면 조형",
+              "count": 18
+            },
+            {
+              "name": "합주",
+              "count": 2
+            },
+            {
+              "name": "합창",
+              "count": 2
+            },
+            {
+              "name": "현대문학 감상",
+              "count": 14
+            }
+          ]
+        },
+        {
+          "group": "외국어 계열",
+          "total": 525,
+          "subjects": [
+            {
+              "name": "독일어 독해와 작문 I",
+              "count": 8
+            },
+            {
+              "name": "독일어 독해와 작문 II",
+              "count": 8
+            },
+            {
+              "name": "독일어 회화 I",
+              "count": 5
+            },
+            {
+              "name": "독일어 회화 II",
+              "count": 5
+            },
+            {
+              "name": "독일어권 문화",
+              "count": 5
+            },
+            {
+              "name": "러시아 문화",
+              "count": 5
+            },
+            {
+              "name": "러시아어 독해와 작문 I",
+              "count": 6
+            },
+            {
+              "name": "러시아어 독해와 작문 II",
+              "count": 6
+            },
+            {
+              "name": "러시아어 회화 I",
+              "count": 6
+            },
+            {
+              "name": "러시아어 회화 II",
+              "count": 6
+            },
+            {
+              "name": "베트남 문화",
+              "count": 4
+            },
+            {
+              "name": "베트남어 독해와 작문 I",
+              "count": 6
+            },
+            {
+              "name": "베트남어 독해와 작문 II",
+              "count": 6
+            },
+            {
+              "name": "베트남어 회화 I",
+              "count": 6
+            },
+            {
+              "name": "베트남어 회화 II",
+              "count": 6
+            },
+            {
+              "name": "스페인어 독해와 작문 I",
+              "count": 8
+            },
+            {
+              "name": "스페인어 독해와 작문 II",
+              "count": 8
+            },
+            {
+              "name": "스페인어 회화 I",
+              "count": 7
+            },
+            {
+              "name": "스페인어 회화 II",
+              "count": 7
+            },
+            {
+              "name": "스페인어권 문화",
+              "count": 4
+            },
+            {
+              "name": "심화 영어 독해 I",
+              "count": 10
+            },
+            {
+              "name": "심화 영어 독해 II",
+              "count": 10
+            },
+            {
+              "name": "심화 영어 작문 I",
+              "count": 7
+            },
+            {
+              "name": "심화 영어 작문 II",
+              "count": 8
+            },
+            {
+              "name": "심화 영어 회화 I",
+              "count": 12
+            },
+            {
+              "name": "심화 영어 회화 II",
+              "count": 12
+            },
+            {
+              "name": "심화영어 I",
+              "count": 32
+            },
+            {
+              "name": "심화영어 II",
+              "count": 32
+            },
+            {
+              "name": "아랍문화",
+              "count": 6
+            },
+            {
+              "name": "아랍어 독해와 작문 I",
+              "count": 7
+            },
+            {
+              "name": "아랍어 독해와 작문 II",
+              "count": 7
+            },
+            {
+              "name": "아랍어 회화 I",
+              "count": 7
+            },
+            {
+              "name": "아랍어 회화 II",
+              "count": 7
+            },
+            {
+              "name": "일본문화",
+              "count": 6
+            },
+            {
+              "name": "일본어 독해와 작문 I",
+              "count": 6
+            },
+            {
+              "name": "일본어 독해와 작문 II",
+              "count": 6
+            },
+            {
+              "name": "일본어 회화 I",
+              "count": 7
+            },
+            {
+              "name": "일본어 회화 II",
+              "count": 7
+            },
+            {
+              "name": "전공 기초 독일어",
+              "count": 16
+            },
+            {
+              "name": "전공 기초 러시아어",
+              "count": 19
+            },
+            {
+              "name": "전공 기초 베트남어",
+              "count": 15
+            },
+            {
+              "name": "전공 기초 스페인어",
+              "count": 18
+            },
+            {
+              "name": "전공 기초 아랍어",
+              "count": 20
+            },
+            {
+              "name": "전공 기초 일본어",
+              "count": 24
+            },
+            {
+              "name": "전공 기초 프랑스어",
+              "count": 21
+            },
+            {
+              "name": "전공기초 중국어",
+              "count": 19
+            },
+            {
+              "name": "중국 문화",
+              "count": 5
+            },
+            {
+              "name": "중국어 독해와 작문 I",
+              "count": 7
+            },
+            {
+              "name": "중국어 독해와 작문 II",
+              "count": 7
+            },
+            {
+              "name": "중국어 회화 I",
+              "count": 6
+            },
+            {
+              "name": "중국어 회화 II",
+              "count": 5
+            },
+            {
+              "name": "프랑스어 독해와 작문 I",
+              "count": 7
+            },
+            {
+              "name": "프랑스어 독해와 작문 II",
+              "count": 7
+            },
+            {
+              "name": "프랑스어 회화 I",
+              "count": 6
+            },
+            {
+              "name": "프랑스어 회화 II",
+              "count": 6
+            },
+            {
+              "name": "프랑스어권 문화",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "group": "음악",
+          "total": 23,
+          "subjects": [
+            {
+              "name": "음악",
+              "count": 11
+            },
+            {
+              "name": "음악 감상과 비평",
+              "count": 6
+            },
+            {
+              "name": "음악 연주",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "group": "정보",
+          "total": 29,
+          "subjects": [
+            {
+              "name": "정보",
+              "count": 29
+            }
+          ]
+        },
+        {
+          "group": "제2외국어",
+          "total": 298,
+          "subjects": [
+            {
+              "name": "독일어 I",
+              "count": 16
+            },
+            {
+              "name": "독일어 II",
+              "count": 16
+            },
+            {
+              "name": "러시아어 I",
+              "count": 16
+            },
+            {
+              "name": "러시아어 II",
+              "count": 19
+            },
+            {
+              "name": "베트남어 I",
+              "count": 16
+            },
+            {
+              "name": "베트남어 II",
+              "count": 18
+            },
+            {
+              "name": "스페인어 I",
+              "count": 17
+            },
+            {
+              "name": "스페인어 II",
+              "count": 17
+            },
+            {
+              "name": "아랍어 I",
+              "count": 17
+            },
+            {
+              "name": "아랍어 II",
+              "count": 18
+            },
+            {
+              "name": "일본어 I",
+              "count": 24
+            },
+            {
+              "name": "일본어 II",
+              "count": 24
+            },
+            {
+              "name": "중국어 I",
+              "count": 19
+            },
+            {
+              "name": "중국어 II",
+              "count": 19
+            },
+            {
+              "name": "프랑스어 I",
+              "count": 21
+            },
+            {
+              "name": "프랑스어 II",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "group": "체육",
+          "total": 51,
+          "subjects": [
+            {
+              "name": "스포츠 생활",
+              "count": 11
+            },
+            {
+              "name": "운동과 건강",
+              "count": 10
+            },
+            {
+              "name": "체육",
+              "count": 19
+            },
+            {
+              "name": "체육탐구",
+              "count": 11
+            }
+          ]
+        },
+        {
+          "group": "체육 계열",
+          "total": 119,
+          "subjects": [
+            {
+              "name": "개인 대인 운동",
+              "count": 10
+            },
+            {
+              "name": "단체 운동",
+              "count": 10
+            },
+            {
+              "name": "수상 운동",
+              "count": 10
+            },
+            {
+              "name": "스포츠 개론",
+              "count": 9
+            },
+            {
+              "name": "스포츠 경기 분석",
+              "count": 7
+            },
+            {
+              "name": "스포츠 경기 실습",
+              "count": 7
+            },
+            {
+              "name": "스포츠 경기 체력",
+              "count": 8
+            },
+            {
+              "name": "육상 운동",
+              "count": 10
+            },
+            {
+              "name": "체육 전공 실기 심화",
+              "count": 6
+            },
+            {
+              "name": "체육 전공 실기 응용",
+              "count": 6
+            },
+            {
+              "name": "체육 지도법",
+              "count": 10
+            },
+            {
+              "name": "체육과 진로 탐구",
+              "count": 10
+            },
+            {
+              "name": "체육전공 실기 기초",
+              "count": 6
+            },
+            {
+              "name": "체조 운동",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "group": "한국사",
+          "total": 26,
+          "subjects": [
+            {
+              "name": "한국사",
+              "count": 26
+            }
+          ]
+        },
+        {
+          "group": "한문",
+          "total": 38,
+          "subjects": [
+            {
+              "name": "한문 I",
+              "count": 21
+            },
+            {
+              "name": "한문 II",
+              "count": 17
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "subjects_by_curriculum": {
+    "2022_m": {
+      "과학": [
+        "과학"
+      ],
+      "국어": [
+        "국어"
+      ],
+      "기술·가정": [
+        "기술·가정"
+      ],
+      "도덕": [
+        "도덕"
+      ],
+      "미술": [
+        "미술"
+      ],
+      "사회": [
+        "사회",
+        "역사"
+      ],
+      "수학": [
+        "수학"
+      ],
+      "영어": [
+        "영어"
+      ],
+      "음악": [
+        "음악"
+      ],
+      "정보": [
+        "정보"
+      ],
+      "중학교 선택": [
+        "보건",
+        "생활 독일어",
+        "생활 러시아어",
+        "생활 베트남어",
+        "생활 스페인어",
+        "생활 아랍어",
+        "생활 일본어",
+        "생활 중국어",
+        "생활 프랑스어",
+        "진로와 직업",
+        "환경"
+      ],
+      "체육": [
+        "체육"
+      ],
+      "한문": [
+        "한문"
+      ]
+    },
+    "2022_h": {
+      "과학": [
+        "과학의 역사와 문화",
+        "과학탐구실험1",
+        "과학탐구실험2",
+        "기후변화와 환경생태",
+        "물리학",
+        "물질과 에너지",
+        "생명과학",
+        "생물의 유전",
+        "세포와 물질대사",
+        "역학과 에너지",
+        "융합과학 탐구",
+        "전자기와 양자",
+        "지구과학",
+        "지구시스템과학",
+        "통합과학1",
+        "통합과학2",
+        "행성우주과학",
+        "화학",
+        "화학 반응의 세계"
+      ],
+      "과학계열": [
+        "고급 기하",
+        "고급 대수",
+        "고급 물리학",
+        "고급 미적분",
+        "고급 생명과학",
+        "고급 지구과학",
+        "고급 화학",
+        "과학과제 연구",
+        "물리학 실험",
+        "생명과학 실험",
+        "이산 수학",
+        "전문 수학",
+        "정보과학",
+        "지구과학 실험",
+        "화학 실험"
+      ],
+      "교양": [
+        "교육의 이해",
+        "논리와 사고",
+        "논술",
+        "보건",
+        "삶과 종교",
+        "인간과 경제활동",
+        "인간과 심리",
+        "인간과 철학",
+        "진로와 직업",
+        "환경"
+      ],
+      "국어": [
+        "공통 국어1",
+        "공통국어2",
+        "독서 토론과 글쓰기",
+        "독서와 작문",
+        "매체 의사소통",
+        "문학",
+        "문학과 영상",
+        "언어생활 탐구",
+        "주제 탐구 독서",
+        "직무 의사소통",
+        "화법과 언어"
+      ],
+      "기술·가정": [
+        "기술·가정",
+        "로봇과 공학세계",
+        "생애 설계와 자립",
+        "생활과학 탐구",
+        "아동발달과 부모",
+        "지식 재산 일반",
+        "창의 공학 설계"
+      ],
+      "도덕": [
+        "윤리문제 탐구",
+        "윤리와 사상",
+        "인문학과 윤리",
+        "현대사회와 윤리"
+      ],
+      "미술": [
+        "미술",
+        "미술 감상과 비평",
+        "미술 창작",
+        "미술과 매체"
+      ],
+      "사회": [
+        "경제",
+        "국제관계의 이해",
+        "금융과 경제생활",
+        "기후변화와 지속가능한 세계",
+        "도시의 미래 탐구",
+        "동아시아 역사 기행",
+        "법과 사회",
+        "사회문제 탐구",
+        "사회와 문화",
+        "세계사",
+        "세계시민과 지리",
+        "여행지리",
+        "역사로 탐구하는 현대 세계",
+        "정치",
+        "통합사회1",
+        "통합사회2",
+        "한국지리 탐구"
+      ],
+      "수학": [
+        "경제 수학",
+        "공통수학1",
+        "공통수학2",
+        "기본수학1",
+        "기본수학2",
+        "기하",
+        "대수",
+        "미적분Ⅰ",
+        "미적분Ⅱ",
+        "수학과 문화",
+        "수학과제 탐구",
+        "실용 통계",
+        "인공지능 수학",
+        "직무 수학",
+        "확률과 통계"
+      ],
+      "역사": [
+        "한국사1",
+        "한국사2"
+      ],
+      "영어": [
+        "공통영어1",
+        "공통영어2",
+        "기본영어1",
+        "기본영어2",
+        "미디어 영어",
+        "세계 문화와 영어",
+        "실생활 영어 회화",
+        "심화 영어",
+        "심화 영어 독해와 작문",
+        "영미 문학 읽기",
+        "영어 독해와 작문",
+        "영어 발표와 토론",
+        "영어Ⅰ",
+        "영어Ⅱ",
+        "직무 영어"
+      ],
+      "예술 계열": [
+        "극 창작",
+        "드로잉",
+        "무대미술과 기술",
+        "무용 감상과 비평",
+        "무용 기초 실기",
+        "무용 전공 실기",
+        "무용 제작 실습",
+        "무용과 매체",
+        "무용과 몸",
+        "무용의 이해",
+        "문예 창작의 이해",
+        "문장론",
+        "문학 감상과 비평",
+        "문학과 매체",
+        "미술 매체 탐구",
+        "미술 이론",
+        "미술 전공 실기",
+        "미술과 사회",
+        "미술사",
+        "사진 감상과 비평",
+        "사진 촬영",
+        "사진 표현 기법",
+        "사진과 삶",
+        "사진의 이해",
+        "소설 창작",
+        "시 창작",
+        "시창•청음",
+        "안무",
+        "연극",
+        "연극 감상과 비평",
+        "연극 제작 실습",
+        "연극과 말",
+        "연극과 몸",
+        "연극과 삶",
+        "연기",
+        "영상 제작의 이해",
+        "영화 감상과 비평",
+        "영화 제작 실습",
+        "영화와 삶",
+        "영화의 이해",
+        "음악 공연 실습",
+        "음악 이론",
+        "음악 전공 실기",
+        "음악과 문화",
+        "음악사",
+        "조형 탐구",
+        "촬영•조명",
+        "편집•사운드",
+        "합창•합주"
+      ],
+      "음악": [
+        "음악",
+        "음악 감상과 비평",
+        "음악 연주와 창작",
+        "음악과 미디어"
+      ],
+      "정보": [
+        "데이터 과학",
+        "소프트웨어와 생활",
+        "인공지능 기초",
+        "정보"
+      ],
+      "제2외국어": [
+        "독일어",
+        "독일어 회화",
+        "독일어권 문화",
+        "러시아 문화",
+        "러시아어",
+        "러시아어 회화",
+        "베트남 문화",
+        "베트남어",
+        "베트남어 회화",
+        "생활 독일어",
+        "생활 러시아어",
+        "생활 베트남어",
+        "생활 스페인어",
+        "생활 아랍어",
+        "생활 일본어",
+        "생활 중국어",
+        "생활 프랑스어",
+        "스페인어",
+        "스페인어 회화",
+        "스페인어권 문화",
+        "심화 독일어",
+        "심화 러시아어",
+        "심화 베트남어",
+        "심화 스페인어",
+        "심화 아랍어",
+        "심화 일본어",
+        "심화 중국어",
+        "심화 프랑스어",
+        "아랍 문화",
+        "아랍어",
+        "아랍어 회화",
+        "일본 문화",
+        "일본어",
+        "일본어 회화",
+        "중국 문화",
+        "중국어",
+        "중국어 회화",
+        "프랑스어",
+        "프랑스어 회화",
+        "프랑스어권 문화"
+      ],
+      "체육": [
+        "스포츠 과학",
+        "스포츠 문화",
+        "스포츠 생활1",
+        "스포츠 생활2",
+        "운동과 건강",
+        "체육1",
+        "체육2"
+      ],
+      "체육 계열": [
+        "고급 체육 전공 실기",
+        "기초 체육 전공 실기",
+        "수상 스포츠",
+        "스포츠 개론",
+        "스포츠 경기 기술",
+        "스포츠 경기 분석",
+        "스포츠 경기 체력",
+        "스포츠 교육",
+        "스포츠 생리의학",
+        "스포츠 행정 및 경영",
+        "심화 체육 전공 실기",
+        "육상",
+        "체조"
+      ],
+      "한문": [
+        "언어생활과 한자",
+        "한문",
+        "한문 고전 읽기"
+      ]
+    },
+    "2015_m": {
+      "과학": [
+        "과학"
+      ],
+      "국어": [
+        "국어"
+      ],
+      "기술·가정": [
+        "기술·가정"
+      ],
+      "도덕": [
+        "도덕"
+      ],
+      "미술": [
+        "미술"
+      ],
+      "사회": [
+        "사회",
+        "역사"
+      ],
+      "수학": [
+        "수학"
+      ],
+      "영어": [
+        "영어"
+      ],
+      "음악": [
+        "음악"
+      ],
+      "정보": [
+        "정보"
+      ],
+      "중학교 선택": [
+        "보건",
+        "생활 독일어",
+        "생활 러시아어",
+        "생활 베트남어",
+        "생활 스페인어",
+        "생활 아랍어",
+        "생활 일본어",
+        "생활 중국어",
+        "생활 프랑스어",
+        "진로와 직업",
+        "환경"
+      ],
+      "체육": [
+        "체육"
+      ],
+      "한문": [
+        "한문"
+      ]
+    },
+    "2015_h": {
+      "과학": [
+        "과학사",
+        "과학탐구실험",
+        "물리학 I",
+        "물리학 II",
+        "생명과학Ⅰ",
+        "생명과학Ⅱ",
+        "생활과 과학",
+        "융합과학",
+        "지구과학Ⅰ",
+        "지구과학Ⅱ",
+        "통합과학",
+        "화학Ⅰ",
+        "화학Ⅱ"
+      ],
+      "과학계열": [
+        "고급 물리학",
+        "고급 생명과학",
+        "고급 지구과학",
+        "고급 화학",
+        "고급수학 I",
+        "고급수학 II",
+        "과학과제 연구",
+        "물리학 실험",
+        "생명과학 실험",
+        "생태와 환경",
+        "심화 수학 I",
+        "심화 수학 II",
+        "융합과학 탐구",
+        "정보과학",
+        "지구과학 실험",
+        "화학 실험"
+      ],
+      "교양": [
+        "교육학",
+        "논리학",
+        "논술",
+        "보건",
+        "실용경제",
+        "심리학",
+        "종교학",
+        "진로와 직업",
+        "철학",
+        "환경"
+      ],
+      "국어": [
+        "고전 읽기",
+        "국어",
+        "독서",
+        "문학",
+        "실용 국어",
+        "심화 국어",
+        "언어와 매체",
+        "화법과 작문"
+      ],
+      "국제 계열": [
+        "국제 관계와 국제기구",
+        "국제 정치",
+        "국제경제",
+        "국제법",
+        "비교 문화",
+        "사회 탐구 방법",
+        "사회과제 연구",
+        "세계문제와 미래사회",
+        "지역 이해",
+        "한국사회의 이해",
+        "현대 세계의 변화"
+      ],
+      "기술·가정": [
+        "가정과학",
+        "공학 일반",
+        "기술·가정",
+        "농업 생명 과학",
+        "지식 재산 일반",
+        "창의 경영",
+        "해양 문화와 기술"
+      ],
+      "도덕": [
+        "고전과 윤리",
+        "생활과 윤리",
+        "윤리와 사상"
+      ],
+      "미술": [
+        "미술",
+        "미술 감상과 비평",
+        "미술 창작"
+      ],
+      "사회": [
+        "경제",
+        "동아시아사",
+        "사회문제탐구",
+        "사회문화",
+        "세계사",
+        "세계지리",
+        "여행지리",
+        "정치와법",
+        "통합사회",
+        "한국지리"
+      ],
+      "수학": [
+        "경제 수학",
+        "기본 수학",
+        "기하",
+        "미적분",
+        "수학",
+        "수학Ⅰ",
+        "수학Ⅱ",
+        "수학과제 탐구",
+        "실용 수학",
+        "확률과 통계"
+      ],
+      "연극": [
+        "연극"
+      ],
+      "영어": [
+        "실용 영어",
+        "영미문학 읽기",
+        "영어",
+        "영어 독해와 작문",
+        "영어 회화",
+        "영어Ⅰ",
+        "영어Ⅱ",
+        "영어권 문화",
+        "진로 영어"
+      ],
+      "예술 계열": [
+        "고전문학 감상",
+        "공연실습",
+        "극 창작",
+        "기초 촬영",
+        "드로잉",
+        "매체 미술",
+        "무대기술",
+        "무용 감상과 비평",
+        "무용 기초 실기",
+        "무용 음악 실습",
+        "무용 전공 실기",
+        "무용과 매체",
+        "무용과 몸",
+        "무용의 이해",
+        "문예 창작 입문",
+        "문장론",
+        "문학 개론",
+        "문학과 매체",
+        "미술 이론",
+        "미술 전공 실기",
+        "미술사",
+        "사진 감상과 비평",
+        "사진 영상 편집",
+        "사진 표현 기법",
+        "사진의 이해",
+        "소설 창작",
+        "시 창작",
+        "시나리오",
+        "시창청음",
+        "안무",
+        "암실 실기",
+        "연극 감상과 비평",
+        "연극 제작 실습",
+        "연극의 이해",
+        "연기",
+        "영상 제작의 이해",
+        "영화 감상과 비평",
+        "영화 제작 실습",
+        "영화기술",
+        "영화의 이해",
+        "음악 전공 실기",
+        "음악사",
+        "음악이론",
+        "입체조형",
+        "중급 촬영",
+        "평면 조형",
+        "합주",
+        "합창",
+        "현대문학 감상"
+      ],
+      "외국어 계열": [
+        "독일어 독해와 작문 I",
+        "독일어 독해와 작문 II",
+        "독일어 회화 I",
+        "독일어 회화 II",
+        "독일어권 문화",
+        "러시아 문화",
+        "러시아어 독해와 작문 I",
+        "러시아어 독해와 작문 II",
+        "러시아어 회화 I",
+        "러시아어 회화 II",
+        "베트남 문화",
+        "베트남어 독해와 작문 I",
+        "베트남어 독해와 작문 II",
+        "베트남어 회화 I",
+        "베트남어 회화 II",
+        "스페인어 독해와 작문 I",
+        "스페인어 독해와 작문 II",
+        "스페인어 회화 I",
+        "스페인어 회화 II",
+        "스페인어권 문화",
+        "심화 영어 독해 I",
+        "심화 영어 독해 II",
+        "심화 영어 작문 I",
+        "심화 영어 작문 II",
+        "심화 영어 회화 I",
+        "심화 영어 회화 II",
+        "심화영어 I",
+        "심화영어 II",
+        "아랍문화",
+        "아랍어 독해와 작문 I",
+        "아랍어 독해와 작문 II",
+        "아랍어 회화 I",
+        "아랍어 회화 II",
+        "일본문화",
+        "일본어 독해와 작문 I",
+        "일본어 독해와 작문 II",
+        "일본어 회화 I",
+        "일본어 회화 II",
+        "전공 기초 독일어",
+        "전공 기초 러시아어",
+        "전공 기초 베트남어",
+        "전공 기초 스페인어",
+        "전공 기초 아랍어",
+        "전공 기초 일본어",
+        "전공 기초 프랑스어",
+        "전공기초 중국어",
+        "중국 문화",
+        "중국어 독해와 작문 I",
+        "중국어 독해와 작문 II",
+        "중국어 회화 I",
+        "중국어 회화 II",
+        "프랑스어 독해와 작문 I",
+        "프랑스어 독해와 작문 II",
+        "프랑스어 회화 I",
+        "프랑스어 회화 II",
+        "프랑스어권 문화"
+      ],
+      "음악": [
+        "음악",
+        "음악 감상과 비평",
+        "음악 연주"
+      ],
+      "정보": [
+        "정보"
+      ],
+      "제2외국어": [
+        "독일어 I",
+        "독일어 II",
+        "러시아어 I",
+        "러시아어 II",
+        "베트남어 I",
+        "베트남어 II",
+        "스페인어 I",
+        "스페인어 II",
+        "아랍어 I",
+        "아랍어 II",
+        "일본어 I",
+        "일본어 II",
+        "중국어 I",
+        "중국어 II",
+        "프랑스어 I",
+        "프랑스어 II"
+      ],
+      "체육": [
+        "스포츠 생활",
+        "운동과 건강",
+        "체육",
+        "체육탐구"
+      ],
+      "체육 계열": [
+        "개인 대인 운동",
+        "단체 운동",
+        "수상 운동",
+        "스포츠 개론",
+        "스포츠 경기 분석",
+        "스포츠 경기 실습",
+        "스포츠 경기 체력",
+        "육상 운동",
+        "체육 전공 실기 심화",
+        "체육 전공 실기 응용",
+        "체육 지도법",
+        "체육과 진로 탐구",
+        "체육전공 실기 기초",
+        "체조 운동"
+      ],
+      "한국사": [
+        "한국사"
+      ],
+      "한문": [
+        "한문 I",
+        "한문 II"
+      ]
+    }
+  },
+  "stats": {
+    "total_records": 9126,
+    "by_target": {
+      "2022_m": {
+        "file": "data/standards_2022_m.json",
+        "total_standards": 714,
+        "groups_count": 13,
+        "subjects_count": 24
+      },
+      "2022_h": {
+        "file": "data/standards_2022_h.json",
+        "total_standards": 3260,
+        "groups_count": 18,
+        "subjects_count": 239
+      },
+      "2015_m": {
+        "file": "data/standards_2015_m.json",
+        "total_standards": 752,
+        "groups_count": 13,
+        "subjects_count": 24
+      },
+      "2015_h": {
+        "file": "data/standards_2015_h.json",
+        "total_standards": 4400,
+        "groups_count": 21,
+        "subjects_count": 247
+      }
+    },
+    "subject_counts": {
+      "2022_m": {
+        "과학": 87,
+        "국어": 51,
+        "기술·가정": 52,
+        "도덕": 22,
+        "미술": 13,
+        "사회": 74,
+        "역사": 40,
+        "수학": 60,
+        "영어": 21,
+        "음악": 13,
+        "정보": 25,
+        "보건": 26,
+        "생활 독일어": 16,
+        "생활 러시아어": 15,
+        "생활 베트남어": 18,
+        "생활 스페인어": 18,
+        "생활 아랍어": 16,
+        "생활 일본어": 18,
+        "생활 중국어": 17,
+        "생활 프랑스어": 16,
+        "진로와 직업": 14,
+        "환경": 19,
+        "체육": 51,
+        "한문": 12
+      },
+      "2022_h": {
+        "과학의 역사와 문화": 17,
+        "과학탐구실험1": 6,
+        "과학탐구실험2": 6,
+        "기후변화와 환경생태": 15,
+        "물리학": 18,
+        "물질과 에너지": 14,
+        "생명과학": 19,
+        "생물의 유전": 17,
+        "세포와 물질대사": 18,
+        "역학과 에너지": 16,
+        "융합과학 탐구": 15,
+        "전자기와 양자": 17,
+        "지구과학": 16,
+        "지구시스템과학": 15,
+        "통합과학1": 16,
+        "통합과학2": 15,
+        "행성우주과학": 15,
+        "화학": 15,
+        "화학 반응의 세계": 14,
+        "고급 기하": 18,
+        "고급 대수": 20,
+        "고급 물리학": 22,
+        "고급 미적분": 22,
+        "고급 생명과학": 21,
+        "고급 지구과학": 33,
+        "고급 화학": 33,
+        "과학과제 연구": 12,
+        "물리학 실험": 35,
+        "생명과학 실험": 40,
+        "이산 수학": 21,
+        "전문 수학": 24,
+        "정보과학": 18,
+        "지구과학 실험": 38,
+        "화학 실험": 32,
+        "교육의 이해": 10,
+        "논리와 사고": 14,
+        "논술": 12,
+        "보건": 26,
+        "삶과 종교": 14,
+        "인간과 경제활동": 12,
+        "인간과 심리": 15,
+        "인간과 철학": 16,
+        "진로와 직업": 15,
+        "환경": 21,
+        "공통 국어1": 14,
+        "공통국어2": 15,
+        "독서 토론과 글쓰기": 7,
+        "독서와 작문": 15,
+        "매체 의사소통": 7,
+        "문학": 12,
+        "문학과 영상": 10,
+        "언어생활 탐구": 7,
+        "주제 탐구 독서": 7,
+        "직무 의사소통": 10,
+        "화법과 언어": 15,
+        "기술·가정": 30,
+        "로봇과 공학세계": 17,
+        "생애 설계와 자립": 14,
+        "생활과학 탐구": 14,
+        "아동발달과 부모": 15,
+        "지식 재산 일반": 17,
+        "창의 공학 설계": 17,
+        "윤리문제 탐구": 13,
+        "윤리와 사상": 15,
+        "인문학과 윤리": 12,
+        "현대사회와 윤리": 17,
+        "미술": 12,
+        "미술 감상과 비평": 8,
+        "미술 창작": 8,
+        "미술과 매체": 8,
+        "경제": 12,
+        "국제관계의 이해": 12,
+        "금융과 경제생활": 12,
+        "기후변화와 지속가능한 세계": 12,
+        "도시의 미래 탐구": 12,
+        "동아시아 역사 기행": 12,
+        "법과 사회": 13,
+        "사회문제 탐구": 12,
+        "사회와 문화": 15,
+        "세계사": 13,
+        "세계시민과 지리": 13,
+        "여행지리": 12,
+        "역사로 탐구하는 현대 세계": 14,
+        "정치": 16,
+        "통합사회1": 14,
+        "통합사회2": 16,
+        "한국지리 탐구": 15,
+        "경제 수학": 18,
+        "공통수학1": 19,
+        "공통수학2": 20,
+        "기본수학1": 17,
+        "기본수학2": 17,
+        "기하": 14,
+        "대수": 18,
+        "미적분Ⅰ": 20,
+        "미적분Ⅱ": 23,
+        "수학과 문화": 16,
+        "수학과제 탐구": 10,
+        "실용 통계": 13,
+        "인공지능 수학": 15,
+        "직무 수학": 18,
+        "확률과 통계": 16,
+        "한국사1": 13,
+        "한국사2": 13,
+        "공통영어1": 16,
+        "공통영어2": 17,
+        "기본영어1": 16,
+        "기본영어2": 16,
+        "미디어 영어": 10,
+        "세계 문화와 영어": 10,
+        "실생활 영어 회화": 9,
+        "심화 영어": 16,
+        "심화 영어 독해와 작문": 17,
+        "영미 문학 읽기": 8,
+        "영어 독해와 작문": 17,
+        "영어 발표와 토론": 16,
+        "영어Ⅰ": 16,
+        "영어Ⅱ": 17,
+        "직무 영어": 8,
+        "극 창작": 10,
+        "드로잉": 10,
+        "무대미술과 기술": 20,
+        "무용 감상과 비평": 6,
+        "무용 기초 실기": 7,
+        "무용 전공 실기": 8,
+        "무용 제작 실습": 8,
+        "무용과 매체": 7,
+        "무용과 몸": 7,
+        "무용의 이해": 7,
+        "문예 창작의 이해": 10,
+        "문장론": 10,
+        "문학 감상과 비평": 10,
+        "문학과 매체": 10,
+        "미술 매체 탐구": 10,
+        "미술 이론": 14,
+        "미술 전공 실기": 12,
+        "미술과 사회": 10,
+        "미술사": 10,
+        "사진 감상과 비평": 7,
+        "사진 촬영": 10,
+        "사진 표현 기법": 8,
+        "사진과 삶": 8,
+        "사진의 이해": 9,
+        "소설 창작": 10,
+        "시 창작": 10,
+        "시창•청음": 8,
+        "안무": 8,
+        "연극": 13,
+        "연극 감상과 비평": 12,
+        "연극 제작 실습": 14,
+        "연극과 말": 13,
+        "연극과 몸": 12,
+        "연극과 삶": 12,
+        "연기": 15,
+        "영상 제작의 이해": 8,
+        "영화 감상과 비평": 9,
+        "영화 제작 실습": 12,
+        "영화와 삶": 8,
+        "영화의 이해": 15,
+        "음악 공연 실습": 8,
+        "음악 이론": 8,
+        "음악 전공 실기": 8,
+        "음악과 문화": 8,
+        "음악사": 8,
+        "조형 탐구": 11,
+        "촬영•조명": 10,
+        "편집•사운드": 10,
+        "합창•합주": 8,
+        "음악": 13,
+        "음악 감상과 비평": 8,
+        "음악 연주와 창작": 8,
+        "음악과 미디어": 8,
+        "데이터 과학": 19,
+        "소프트웨어와 생활": 19,
+        "인공지능 기초": 19,
+        "정보": 23,
+        "독일어": 18,
+        "독일어 회화": 10,
+        "독일어권 문화": 7,
+        "러시아 문화": 7,
+        "러시아어": 19,
+        "러시아어 회화": 10,
+        "베트남 문화": 7,
+        "베트남어": 21,
+        "베트남어 회화": 10,
+        "생활 독일어": 16,
+        "생활 러시아어": 15,
+        "생활 베트남어": 18,
+        "생활 스페인어": 18,
+        "생활 아랍어": 16,
+        "생활 일본어": 18,
+        "생활 중국어": 17,
+        "생활 프랑스어": 16,
+        "스페인어": 22,
+        "스페인어 회화": 10,
+        "스페인어권 문화": 7,
+        "심화 독일어": 18,
+        "심화 러시아어": 19,
+        "심화 베트남어": 20,
+        "심화 스페인어": 21,
+        "심화 아랍어": 25,
+        "심화 일본어": 22,
+        "심화 중국어": 22,
+        "심화 프랑스어": 20,
+        "아랍 문화": 8,
+        "아랍어": 20,
+        "아랍어 회화": 13,
+        "일본 문화": 8,
+        "일본어": 22,
+        "일본어 회화": 11,
+        "중국 문화": 7,
+        "중국어": 21,
+        "중국어 회화": 11,
+        "프랑스어": 19,
+        "프랑스어 회화": 11,
+        "프랑스어권 문화": 7,
+        "스포츠 과학": 6,
+        "스포츠 문화": 6,
+        "스포츠 생활1": 6,
+        "스포츠 생활2": 6,
+        "운동과 건강": 6,
+        "체육1": 9,
+        "체육2": 9,
+        "고급 체육 전공 실기": 6,
+        "기초 체육 전공 실기": 6,
+        "수상 스포츠": 8,
+        "스포츠 개론": 7,
+        "스포츠 경기 기술": 6,
+        "스포츠 경기 분석": 6,
+        "스포츠 경기 체력": 6,
+        "스포츠 교육": 8,
+        "스포츠 생리의학": 8,
+        "스포츠 행정 및 경영": 8,
+        "심화 체육 전공 실기": 6,
+        "육상": 8,
+        "체조": 8,
+        "언어생활과 한자": 10,
+        "한문": 14,
+        "한문 고전 읽기": 9
+      },
+      "2015_m": {
+        "과학": 92,
+        "국어": 51,
+        "기술·가정": 54,
+        "도덕": 23,
+        "미술": 15,
+        "사회": 74,
+        "역사": 45,
+        "수학": 61,
+        "영어": 34,
+        "음악": 11,
+        "정보": 17,
+        "보건": 32,
+        "생활 독일어": 16,
+        "생활 러시아어": 14,
+        "생활 베트남어": 13,
+        "생활 스페인어": 12,
+        "생활 아랍어": 15,
+        "생활 일본어": 20,
+        "생활 중국어": 17,
+        "생활 프랑스어": 15,
+        "진로와 직업": 18,
+        "환경": 30,
+        "체육": 54,
+        "한문": 19
+      },
+      "2015_h": {
+        "과학사": 30,
+        "과학탐구실험": 15,
+        "물리학 I": 23,
+        "물리학 II": 27,
+        "생명과학Ⅰ": 23,
+        "생명과학Ⅱ": 30,
+        "생활과 과학": 32,
+        "융합과학": 44,
+        "지구과학Ⅰ": 26,
+        "지구과학Ⅱ": 37,
+        "통합과학": 32,
+        "화학Ⅰ": 23,
+        "화학Ⅱ": 28,
+        "고급 물리학": 69,
+        "고급 생명과학": 52,
+        "고급 지구과학": 71,
+        "고급 화학": 134,
+        "고급수학 I": 27,
+        "고급수학 II": 28,
+        "과학과제 연구": 13,
+        "물리학 실험": 51,
+        "생명과학 실험": 45,
+        "생태와 환경": 20,
+        "심화 수학 I": 52,
+        "심화 수학 II": 39,
+        "융합과학 탐구": 14,
+        "정보과학": 25,
+        "지구과학 실험": 58,
+        "화학 실험": 74,
+        "교육학": 20,
+        "논리학": 21,
+        "논술": 29,
+        "보건": 35,
+        "실용경제": 15,
+        "심리학": 24,
+        "종교학": 41,
+        "진로와 직업": 38,
+        "철학": 12,
+        "환경": 36,
+        "고전 읽기": 8,
+        "국어": 26,
+        "독서": 15,
+        "문학": 15,
+        "실용 국어": 12,
+        "심화 국어": 12,
+        "언어와 매체": 24,
+        "화법과 작문": 24,
+        "국제 관계와 국제기구": 22,
+        "국제 정치": 17,
+        "국제경제": 24,
+        "국제법": 18,
+        "비교 문화": 23,
+        "사회 탐구 방법": 21,
+        "사회과제 연구": 19,
+        "세계문제와 미래사회": 26,
+        "지역 이해": 27,
+        "한국사회의 이해": 20,
+        "현대 세계의 변화": 15,
+        "가정과학": 19,
+        "공학 일반": 17,
+        "기술·가정": 32,
+        "농업 생명 과학": 31,
+        "지식 재산 일반": 27,
+        "창의 경영": 24,
+        "해양 문화와 기술": 35,
+        "고전과 윤리": 12,
+        "생활과 윤리": 18,
+        "윤리와 사상": 22,
+        "미술": 13,
+        "미술 감상과 비평": 15,
+        "미술 창작": 15,
+        "경제": 19,
+        "동아시아사": 16,
+        "사회문제탐구": 24,
+        "사회문화": 20,
+        "세계사": 16,
+        "세계지리": 28,
+        "여행지리": 21,
+        "정치와법": 18,
+        "통합사회": 29,
+        "한국지리": 28,
+        "경제 수학": 23,
+        "기본 수학": 27,
+        "기하": 16,
+        "미적분": 27,
+        "수학": 41,
+        "수학Ⅰ": 19,
+        "수학Ⅱ": 21,
+        "수학과제 탐구": 8,
+        "실용 수학": 14,
+        "확률과 통계": 17,
+        "연극": 19,
+        "실용 영어": 17,
+        "영미문학 읽기": 14,
+        "영어": 21,
+        "영어 독해와 작문": 12,
+        "영어 회화": 10,
+        "영어Ⅰ": 22,
+        "영어Ⅱ": 23,
+        "영어권 문화": 18,
+        "진로 영어": 21,
+        "고전문학 감상": 14,
+        "공연실습": 6,
+        "극 창작": 15,
+        "기초 촬영": 10,
+        "드로잉": 12,
+        "매체 미술": 14,
+        "무대기술": 25,
+        "무용 감상과 비평": 8,
+        "무용 기초 실기": 8,
+        "무용 음악 실습": 8,
+        "무용 전공 실기": 9,
+        "무용과 매체": 8,
+        "무용과 몸": 8,
+        "무용의 이해": 8,
+        "문예 창작 입문": 12,
+        "문장론": 12,
+        "문학 개론": 12,
+        "문학과 매체": 16,
+        "미술 이론": 17,
+        "미술 전공 실기": 14,
+        "미술사": 14,
+        "사진 감상과 비평": 8,
+        "사진 영상 편집": 8,
+        "사진 표현 기법": 12,
+        "사진의 이해": 16,
+        "소설 창작": 13,
+        "시 창작": 13,
+        "시나리오": 26,
+        "시창청음": 2,
+        "안무": 9,
+        "암실 실기": 8,
+        "연극 감상과 비평": 23,
+        "연극 제작 실습": 27,
+        "연극의 이해": 19,
+        "연기": 25,
+        "영상 제작의 이해": 13,
+        "영화 감상과 비평": 11,
+        "영화 제작 실습": 14,
+        "영화기술": 20,
+        "영화의 이해": 19,
+        "음악 전공 실기": 4,
+        "음악사": 6,
+        "음악이론": 13,
+        "입체조형": 16,
+        "중급 촬영": 10,
+        "평면 조형": 18,
+        "합주": 2,
+        "합창": 2,
+        "현대문학 감상": 14,
+        "독일어 독해와 작문 I": 8,
+        "독일어 독해와 작문 II": 8,
+        "독일어 회화 I": 5,
+        "독일어 회화 II": 5,
+        "독일어권 문화": 5,
+        "러시아 문화": 5,
+        "러시아어 독해와 작문 I": 6,
+        "러시아어 독해와 작문 II": 6,
+        "러시아어 회화 I": 6,
+        "러시아어 회화 II": 6,
+        "베트남 문화": 4,
+        "베트남어 독해와 작문 I": 6,
+        "베트남어 독해와 작문 II": 6,
+        "베트남어 회화 I": 6,
+        "베트남어 회화 II": 6,
+        "스페인어 독해와 작문 I": 8,
+        "스페인어 독해와 작문 II": 8,
+        "스페인어 회화 I": 7,
+        "스페인어 회화 II": 7,
+        "스페인어권 문화": 4,
+        "심화 영어 독해 I": 10,
+        "심화 영어 독해 II": 10,
+        "심화 영어 작문 I": 7,
+        "심화 영어 작문 II": 8,
+        "심화 영어 회화 I": 12,
+        "심화 영어 회화 II": 12,
+        "심화영어 I": 32,
+        "심화영어 II": 32,
+        "아랍문화": 6,
+        "아랍어 독해와 작문 I": 7,
+        "아랍어 독해와 작문 II": 7,
+        "아랍어 회화 I": 7,
+        "아랍어 회화 II": 7,
+        "일본문화": 6,
+        "일본어 독해와 작문 I": 6,
+        "일본어 독해와 작문 II": 6,
+        "일본어 회화 I": 7,
+        "일본어 회화 II": 7,
+        "전공 기초 독일어": 16,
+        "전공 기초 러시아어": 19,
+        "전공 기초 베트남어": 15,
+        "전공 기초 스페인어": 18,
+        "전공 기초 아랍어": 20,
+        "전공 기초 일본어": 24,
+        "전공 기초 프랑스어": 21,
+        "전공기초 중국어": 19,
+        "중국 문화": 5,
+        "중국어 독해와 작문 I": 7,
+        "중국어 독해와 작문 II": 7,
+        "중국어 회화 I": 6,
+        "중국어 회화 II": 5,
+        "프랑스어 독해와 작문 I": 7,
+        "프랑스어 독해와 작문 II": 7,
+        "프랑스어 회화 I": 6,
+        "프랑스어 회화 II": 6,
+        "프랑스어권 문화": 6,
+        "음악": 11,
+        "음악 감상과 비평": 6,
+        "음악 연주": 6,
+        "정보": 29,
+        "독일어 I": 16,
+        "독일어 II": 16,
+        "러시아어 I": 16,
+        "러시아어 II": 19,
+        "베트남어 I": 16,
+        "베트남어 II": 18,
+        "스페인어 I": 17,
+        "스페인어 II": 17,
+        "아랍어 I": 17,
+        "아랍어 II": 18,
+        "일본어 I": 24,
+        "일본어 II": 24,
+        "중국어 I": 19,
+        "중국어 II": 19,
+        "프랑스어 I": 21,
+        "프랑스어 II": 21,
+        "스포츠 생활": 11,
+        "운동과 건강": 10,
+        "체육": 19,
+        "체육탐구": 11,
+        "개인 대인 운동": 10,
+        "단체 운동": 10,
+        "수상 운동": 10,
+        "스포츠 개론": 9,
+        "스포츠 경기 분석": 7,
+        "스포츠 경기 실습": 7,
+        "스포츠 경기 체력": 8,
+        "육상 운동": 10,
+        "체육 전공 실기 심화": 6,
+        "체육 전공 실기 응용": 6,
+        "체육 지도법": 10,
+        "체육과 진로 탐구": 10,
+        "체육전공 실기 기초": 6,
+        "체조 운동": 10,
+        "한국사": 26,
+        "한문 I": 21,
+        "한문 II": 17
+      }
+    }
+  }
+}
