@@ -356,15 +356,31 @@
     await loadStandardsForCurrentSelection();
   }
 
+  // 캐시된 데이터
   // =========================================================================
-  // 6. 성취기준 데이터 로드 및 카드 렌더링
+  // 6. 성취기준 데이터 로드 및 카드 렌더링 (캐싱 & 비동기 레이스 방지)
   // =========================================================================
+  const standardsCache = {};
+  let currentLoadRequestId = 0;
+
   async function loadStandardsForCurrentSelection() {
-    const filename = `data/standards_${state.curriculum}_${state.school}.json`;
+    const requestId = ++currentLoadRequestId;
+    const cacheKey = `${state.curriculum}_${state.school}`;
+    const filename = `data/standards_${cacheKey}.json`;
+
     try {
-      const resp = await fetch(filename);
-      if (!resp.ok) throw new Error(`HTTP error ${resp.status}`);
-      const allStandards = await resp.json();
+      let allStandards;
+      if (standardsCache[cacheKey]) {
+        allStandards = standardsCache[cacheKey];
+      } else {
+        const resp = await fetch(filename);
+        if (!resp.ok) throw new Error(`HTTP error ${resp.status}`);
+        allStandards = await resp.json();
+        standardsCache[cacheKey] = allStandards;
+      }
+
+      // 비동기 요청 순서 보장 (최신 요청만 반영)
+      if (requestId !== currentLoadRequestId) return;
 
       // 교과군 및 과목 필터링 (다양한 스키마 키에 유연하게 대응)
       state.currentStandards = allStandards.filter(item => {
@@ -397,6 +413,7 @@
         updatePromptOutput();
       }
     } catch (err) {
+      if (requestId !== currentLoadRequestId) return;
       console.error('Failed to load standards list:', err);
       elements.standardsListContainer.innerHTML = '<div class="p-4 text-xs text-rose-500">성취기준을 불러오지 못했습니다.</div>';
     }
@@ -421,10 +438,23 @@
     elements.standardsCount.textContent = `${filtered.length}개 항목`;
 
     if (filtered.length === 0) {
-      elements.standardsListContainer.innerHTML = `
-        <div class="p-6 text-center text-xs text-slate-400">
-          선택한 교과/과목에 등록된 성취기준이 없습니다.
-        </div>`;
+      elements.standardsListContainer.innerHTML = state.searchQuery
+        ? `<div class="p-6 text-center text-xs text-slate-400">
+             '${state.searchQuery}'에 일치하는 성취기준이 없습니다.<br/>
+             <button type="button" id="btn-clear-search" class="mt-2.5 px-3 py-1 text-[11px] font-semibold rounded-lg bg-indigo-50 text-indigo-600 border border-indigo-200 hover:bg-indigo-100 transition-colors">🔍 검색어 초기화</button>
+           </div>`
+        : `<div class="p-6 text-center text-xs text-slate-400">
+             선택한 교과/과목에 등록된 성취기준이 없습니다.
+           </div>`;
+
+      const clearBtn = elements.standardsListContainer.querySelector('#btn-clear-search');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          state.searchQuery = '';
+          elements.searchInput.value = '';
+          renderStandardsList();
+        });
+      }
       return;
     }
 
@@ -476,6 +506,7 @@
   function renderLevelButtons() {
     elements.levelButtonsContainer.innerHTML = '';
     const levels = state.curriculum === '2022' ? ['A', 'B', 'C', 'D', 'E'] : ['상', '중', '하'];
+    elements.levelButtonsContainer.className = `grid ${state.curriculum === '2022' ? 'grid-cols-5' : 'grid-cols-3'} gap-2 mb-3`;
 
     if (!levels.includes(state.level)) {
       state.level = levels[0];
@@ -814,7 +845,8 @@
 
     renderGroupChips();
     const groups = getAvailableGroups();
-    selectSubjectGroup(groups[0] || '과학');
+    const targetGroup = groups.includes(state.subjectGroup) ? state.subjectGroup : (groups[0] || '과학');
+    selectSubjectGroup(targetGroup);
     renderLevelButtons();
   }
 
@@ -832,7 +864,8 @@
 
     renderGroupChips();
     const groups = getAvailableGroups();
-    selectSubjectGroup(groups[0] || '과학');
+    const targetGroup = groups.includes(state.subjectGroup) ? state.subjectGroup : (groups[0] || '과학');
+    selectSubjectGroup(targetGroup);
     renderLevelButtons();
   }
 
